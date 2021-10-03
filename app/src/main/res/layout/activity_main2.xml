@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3CAF1"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/wall1"
+        android:layout_width="371dp"
+        android:layout_height="451dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mediamodifier_design_template__1_" />
+
+    <TextView
+        android:id="@+id/wall2"
+        android:layout_width="100dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="508dp"
+        android:text="QUICK"
+        android:textAlignment="center"
+        android:textColor="#000B76"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="@+id/wall1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wall3"
+        android:layout_width="102dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:text="LEARN"
+        android:textAlignment="center"
+        android:textColor="#000B76"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wall2" />
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="73dp"
+        android:background="@drawable/round_border"
+        android:text="Continue As A User"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/admin"
+        android:layout_width="268dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="73dp"
+        android:background="@drawable/round_border"
+        android:text="Continue As An Admin"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

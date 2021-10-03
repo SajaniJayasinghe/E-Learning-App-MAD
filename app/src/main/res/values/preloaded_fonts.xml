@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/aladin</item>
+        <item>@font/almendra_sc</item>
+        <item>@font/amarante</item>
+        <item>@font/autour_one</item>
+        <item>@font/berkshire_swash</item>
+        <item>@font/biorhyme_extralight</item>
+        <item>@font/bubblegum_sans</item>
+        <item>@font/cantora_one</item>
+        <item>@font/coustard</item>
+        <item>@font/glass_antiqua</item>
+    </array>
+</resources>
