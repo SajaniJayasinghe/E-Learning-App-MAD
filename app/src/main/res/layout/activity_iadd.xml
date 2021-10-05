@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".I_AddActivity">
+
+
+    <View
+        android:id="@+id/viewheader"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/r"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgview"
+        android:layout_width="123dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagemad" />
+
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="228dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="60dp"
+        android:text="ADD YOUR ADVERTISEMENT HERE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.386"
+        app:layout_constraintStart_toEndOf="@+id/imgview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtTitle"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="14dp"
+        android:ems="10"
+        android:hint="Enter the Title"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewheader" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="14dp"
+        android:ems="10"
+        android:hint="Enter the Email"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
+
+    <EditText
+        android:id="@+id/txtNumber"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="14dp"
+        android:ems="10"
+        android:hint="Enter the Mobile Number"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtDescription"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="14dp"
+        android:ems="10"
+        android:hint="Description"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="14dp"
+        android:ems="10"
+        android:hint="Enter the Name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <EditText
+        android:id="@+id/txtImageUrl"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_border"
+        android:drawablePadding="14dp"
+        android:ems="10"
+        android:hint="Enter the image Url"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+    <Button
+        android:id="@+id/ibtnAdd"
+        android:layout_width="258dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_border"
+        android:text="Add Advertisement"
+        app:backgroundTint="#000b76"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtImageUrl" />
+
+    <Button
+        android:id="@+id/ibtnBack"
+        android:layout_width="152dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_border"
+        android:text="Back"
+        app:backgroundTint="#000b76"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibtnAdd" />
+
+    <View
+        android:id="@+id/viewfooter"
+        android:layout_width="411dp"
+        android:layout_height="61dp"
+        android:background="@drawable/fotter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

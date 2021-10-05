@@ -4,21 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class BookStore extends AppCompatActivity {
+public class S_BookStore extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    MainBookUserViewAdapter mainBookUserViewAdapter;
+    S_MainBookUserViewAdapter mainBookUserViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +26,12 @@ public class BookStore extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //Data fetch in the database
-        FirebaseRecyclerOptions<MainBookModel> options =
-                new FirebaseRecyclerOptions.Builder<MainBookModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Book"),MainBookModel.class)
+        FirebaseRecyclerOptions<S_MainBookModel> options =
+                new FirebaseRecyclerOptions.Builder<S_MainBookModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Book"), S_MainBookModel.class)
                         .build();
 
-        mainBookUserViewAdapter = new MainBookUserViewAdapter(options);
+        mainBookUserViewAdapter = new S_MainBookUserViewAdapter(options);
         recyclerView.setAdapter(mainBookUserViewAdapter);
     }
 
@@ -74,12 +71,12 @@ public class BookStore extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
     private void txtSearch(String str){
-        FirebaseRecyclerOptions<MainBookModel>options =
-                new FirebaseRecyclerOptions.Builder<MainBookModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Book").orderByChild("bookName").startAt(str).endAt(str+"~"),MainBookModel.class)
+        FirebaseRecyclerOptions<S_MainBookModel>options =
+                new FirebaseRecyclerOptions.Builder<S_MainBookModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Book").orderByChild("bookName").startAt(str).endAt(str+"~"), S_MainBookModel.class)
                         .build();
 
-        mainBookUserViewAdapter = new MainBookUserViewAdapter(options);
+        mainBookUserViewAdapter = new S_MainBookUserViewAdapter(options);
         mainBookUserViewAdapter.startListening();
         recyclerView.setAdapter(mainBookUserViewAdapter);
     }

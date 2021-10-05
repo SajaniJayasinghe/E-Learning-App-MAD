@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6E7E7"
+    android:orientation="vertical"
+    tools:context=".R_Calculator">
+
+    <TextView
+        android:id="@+id/Rancal"
+        android:layout_width="230dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Calculator"
+        android:textColor="#171111"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/Ran1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Enter Number:"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Ran2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Enter Number:"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/Rantext"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_weight="1"
+        android:text="Result"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/Ranbutton"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="ADD"
+        android:textColor="#040303"
+        android:textSize="20sp"
+        app:backgroundTint="#D5D5D5" />
+
+    <Button
+        android:id="@+id/Ranbutton1"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="SUBTRACT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:backgroundTint="#D5D5D5" />
+
+
+    <Button
+        android:id="@+id/Ranbutton2"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="MULTTPLY"
+        android:textColor="#131313"
+        android:textSize="20sp"
+        app:backgroundTint="#D5D5D5" />
+
+
+    <Button
+        android:id="@+id/Ranbutton3"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="DIVIDE"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        app:backgroundTint="#D5D5D5" />
+
+
+
+</LinearLayout>

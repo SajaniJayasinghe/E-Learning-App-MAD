@@ -1,8 +1,10 @@
 package com.example.mynew;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +16,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainBookUserViewAdapter extends FirebaseRecyclerAdapter<MainBookModel,MainBookUserViewAdapter.myViewHolder> {
+public class S_MainBookUserViewAdapter extends FirebaseRecyclerAdapter<S_MainBookModel, S_MainBookUserViewAdapter.myViewHolder> {
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -22,15 +24,25 @@ public class MainBookUserViewAdapter extends FirebaseRecyclerAdapter<MainBookMod
      *
      * @param options
      */
-    public MainBookUserViewAdapter(@NonNull FirebaseRecyclerOptions<MainBookModel> options) {
+    public S_MainBookUserViewAdapter(@NonNull FirebaseRecyclerOptions<S_MainBookModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull MainBookModel model) {
+    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull S_MainBookModel model) {
         holder.bookName.setText(model.getBookName());
         holder.author.setText(model.getAuthor());
         holder.stream.setText(model.getStream());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent myIntent = new Intent(v.getContext(),S_BookDetails.class);
+                myIntent.putExtra("pid",model.getPid());
+                v.getContext().startActivity(myIntent);
+            }
+        });
 
         Glide.with(holder.imgurl.getContext())
                 .load(model.getImgurl())
@@ -51,6 +63,7 @@ public class MainBookUserViewAdapter extends FirebaseRecyclerAdapter<MainBookMod
 
         CircleImageView imgurl;
         TextView author, bookName,stream;
+
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);

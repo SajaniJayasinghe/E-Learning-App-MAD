@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterPage extends AppCompatActivity {
+public class S_RegisterPage extends AppCompatActivity {
 
     TextView btn;
 
@@ -47,7 +47,7 @@ public class RegisterPage extends AppCompatActivity {
         inputPassword = findViewById(R.id.reg_password);
         inputConfirmPassword = findViewById(R.id.reg_confirmpassword);
         mAuth = FirebaseAuth.getInstance();
-        mLoadingBar = new ProgressDialog(RegisterPage.this);
+        mLoadingBar = new ProgressDialog(S_RegisterPage.this);
         db=FirebaseDatabase.getInstance();
         user = db.getReference("User");
         btnRegister = findViewById(R.id.reg_signup);
@@ -61,7 +61,7 @@ public class RegisterPage extends AppCompatActivity {
         });
 
         btn.setOnClickListener((v) ->{
-            startActivity(new Intent(RegisterPage.this,LoginPage.class));
+            startActivity(new Intent(S_RegisterPage.this, S_LoginPage.class));
         });
     }
 
@@ -90,7 +90,7 @@ public class RegisterPage extends AppCompatActivity {
         }
         else if (password.isEmpty() || password.length()>7)
         {
-            showError(inputPassword, "Password must be 7 character");
+            showError(inputPassword, "Password must be 6 character");
         }
         else if (confirmPassword.isEmpty() || !confirmPassword.equals(password))
         {
@@ -120,19 +120,19 @@ public class RegisterPage extends AppCompatActivity {
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        Toast.makeText(RegisterPage.this,"Register Successful" +task.getException(), Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(S_RegisterPage.this,"Register Successful" +task.getException(), Toast.LENGTH_SHORT).show();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(RegisterPage.this,"Registration Fail" +task.getException(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(S_RegisterPage.this,"Registration Fail" +task.getException(), Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
                     else
                     {
                         mLoadingBar.dismiss();
-                        Toast.makeText(RegisterPage.this,"Registration Fail"+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(S_RegisterPage.this,"Registration Fail"+task.getException().toString(),Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -140,7 +140,7 @@ public class RegisterPage extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
-        Intent intent = new Intent(RegisterPage.this,LoginPage.class);
+        Intent intent = new Intent(S_RegisterPage.this, S_LoginPage.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

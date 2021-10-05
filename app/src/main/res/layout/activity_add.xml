@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".R_AddActivity"
+    android:orientation="vertical"
+    android:background="@drawable/backgro">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:text="Add New Subject Details"
+        android:textColor="#F8F6F6"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Subject Name"
+        android:textColor="#0B0A0A"
+        android:textSize="25sp" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/RsubName"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Subject Title"
+        android:textColor="#0C0B0B"
+        android:textSize="25sp" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/RsubtitleName"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Subject Description"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/Rsubdescription"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Image Url"
+        android:textColor="#0E0C0C"
+        android:textSize="25sp" />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/RimageUrl"/>
+
+    <Button
+        android:id="@+id/RbtnAdd"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="55dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#000b76"
+        android:gravity="center"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="#FAF5F5"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:backgroundTint="#000b76" />
+
+    <Button
+        android:id="@+id/RbtnBack"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#000b76"
+        android:gravity="center"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#F8F5F5"
+        android:textSize="21dp"
+        app:backgroundTint="#000b76" />
+
+
+
+</LinearLayout>

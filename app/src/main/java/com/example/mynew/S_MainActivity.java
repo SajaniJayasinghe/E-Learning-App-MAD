@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class S_MainActivity extends AppCompatActivity {
 
     private static int QUICK_LEARN_SCREAN = 5000;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                Intent intent = new Intent(S_MainActivity.this, S_MainActivity2.class);
                 startActivity(intent);
                 finish();
             }

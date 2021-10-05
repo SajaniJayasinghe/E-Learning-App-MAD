@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity2 extends AppCompatActivity {
+public class S_MainActivity2 extends AppCompatActivity {
 
     Button user , admin;
 
@@ -22,16 +22,16 @@ public class MainActivity2 extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity2.this,LoginPage.class));
+                startActivity(new Intent(S_MainActivity2.this, S_LoginPage.class));
             }
         });
 
-       // admin.setOnClickListener(new View.OnClickListener() {
-           // @Override
-           // public void onClick(View v) {
-              //  startActivity(new Intent(MainActivity2.this,LoginPage.class));
-            //}
-        //});
+       admin.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+           startActivity(new Intent(S_MainActivity2.this,A_AdminPage.class));
+          }
+       });
 
     }
 }

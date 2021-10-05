@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Update Book Details"
+        android:background="#000b76"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="23dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="   Book Name"
+        android:textColor="#000b76"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/bookname"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textSize="18sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="   Author Name"
+        android:textColor="#000b76"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/book_authorname"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textSize="18sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="   Stream"
+        android:textColor="#000b76"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/book_stream"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="   Book Image Url"
+        android:textColor="#000b76"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/book_image"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="   Book Description"
+        android:textColor="#000b76"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/book_description"/>
+
+
+    <Button
+        android:id="@+id/bookupdate"
+        android:layout_width="357dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:text="UPDATE"
+        android:textAllCaps="false"
+        android:textSize="17dp" />
+
+</LinearLayout>

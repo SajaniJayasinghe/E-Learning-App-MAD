@@ -30,7 +30,7 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 
-public class UserProfile extends AppCompatActivity {
+public class S_UserProfile extends AppCompatActivity {
 
     Button updateButton, logout, deleteBtn;
     ImageButton img;
@@ -65,12 +65,12 @@ public class UserProfile extends AppCompatActivity {
                         Picasso.get().load(uri).into(imageView);
                     }
                 });
-                Toast.makeText(UserProfile.this,"Image Uploaded",Toast.LENGTH_SHORT).show();
+                Toast.makeText(S_UserProfile.this,"Image Uploaded",Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(UserProfile.this, "Image Uploaded Failed !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(S_UserProfile.this, "Image Uploaded Failed !", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -99,9 +99,9 @@ public class UserProfile extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         //data fetch
-        edtName.setText(GlobalVariable.currentUser.getName());
-        edtPhoneNumber.setText(GlobalVariable.currentUser.getPhoneNumber());
-        edtEmail.setText(GlobalVariable.currentUser.getEmail());
+        edtName.setText(S_GlobalVariable.currentUser.getName());
+        edtPhoneNumber.setText(S_GlobalVariable.currentUser.getPhoneNumber());
+        edtEmail.setText(S_GlobalVariable.currentUser.getEmail());
         mAuth = FirebaseAuth.getInstance();
         mUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -121,7 +121,7 @@ public class UserProfile extends AppCompatActivity {
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserProfile.this, EditProfile.class);
+                Intent intent = new Intent(S_UserProfile.this, S_EditProfile.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
@@ -149,7 +149,7 @@ public class UserProfile extends AppCompatActivity {
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(UserProfile.this);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(S_UserProfile.this);
                 dialog.setTitle("Are you sure ?");
                 dialog.setMessage("Deleting this account will result in completely removing your account from the system and you won't be able to access the app");
 
@@ -161,14 +161,14 @@ public class UserProfile extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(UserProfile.this, "Account Deleted", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(UserProfile.this, LoginPage.class);
+                                    Toast.makeText(S_UserProfile.this, "Account Deleted", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(S_UserProfile.this, S_LoginPage.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     startActivity(intent);
                                 }
                                 else {
-                                    Toast.makeText(UserProfile.this, "Invalid User Name Or Password", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(S_UserProfile.this, "Invalid User Name Or Password", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -186,8 +186,8 @@ public class UserProfile extends AppCompatActivity {
         });
     }
     private void signOutUser() {
-        Toast.makeText(UserProfile.this,"Logout Success",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(UserProfile.this,LoginPage.class);
+        Toast.makeText(S_UserProfile.this,"Logout Success",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(S_UserProfile.this, S_LoginPage.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 

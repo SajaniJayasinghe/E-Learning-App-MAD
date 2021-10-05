@@ -9,6 +9,7 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
+        android:id="@+id/Tv"
         android:layout_width="411dp"
         android:layout_height="122dp"
         android:padding="15dp">

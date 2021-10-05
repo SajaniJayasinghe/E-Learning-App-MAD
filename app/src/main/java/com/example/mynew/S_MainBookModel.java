@@ -1,17 +1,26 @@
 package com.example.mynew;
 
-public class MainBookModel {
-    String author,bookName,imgurl,stream,description;
+public class S_MainBookModel {
+    String author,bookName,imgurl,stream,description,pid;
 
-    public MainBookModel() {
+    public S_MainBookModel() {
     }
 
-    public MainBookModel(String author, String bookName, String description, String imgurl, String stream) {
+    public S_MainBookModel(String author, String bookName, String description, String imgurl, String stream,String pid) {
         this.author = author;
         this.bookName = bookName;
         this.imgurl = imgurl;
         this.stream = stream;
         this.description = description;
+        this.pid = pid;
+    }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
     }
 
     public String getAuthor() {

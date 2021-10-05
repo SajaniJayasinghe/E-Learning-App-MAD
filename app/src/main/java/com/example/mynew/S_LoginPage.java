@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class LoginPage extends AppCompatActivity {
+public class S_LoginPage extends AppCompatActivity {
 
     TextView btn,forgotTextLink;
     EditText inputEmail ,inputPassword;
@@ -64,15 +64,14 @@ public class LoginPage extends AppCompatActivity {
                         mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                              Toast.makeText(LoginPage.this,"Reset Link Sent To Your Email !",Toast.LENGTH_SHORT).show();
+                              Toast.makeText(S_LoginPage.this,"Reset Link Sent To Your Email !",Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(LoginPage.this,"Error. Reset Link is Not sent!" +e.getMessage(),Toast.LENGTH_SHORT).show();
+                                Toast.makeText(S_LoginPage.this,"Error. Reset Link is Not sent!" +e.getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         });
-
                     }
                 });
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -85,15 +84,14 @@ public class LoginPage extends AppCompatActivity {
             }
         });
 
-
-        //New user redirected Register page
         btnLogin.setOnClickListener((v) ->{
             checkCredentials();} );
         mAuth = FirebaseAuth.getInstance();
-        mLoadingBar = new ProgressDialog(LoginPage.this);
+        mLoadingBar = new ProgressDialog(S_LoginPage.this);
 
+        //New user redirected register age
         btn.setOnClickListener((v)-> {
-            startActivity(new Intent(LoginPage.this,RegisterPage.class));
+            startActivity(new Intent(S_LoginPage.this, S_RegisterPage.class));
         });
     }
 
@@ -108,7 +106,7 @@ public class LoginPage extends AppCompatActivity {
         }
         else if(password.isEmpty() || password.length()>7)
         {
-            showError(inputPassword,"Password must be 7 character");
+            showError(inputPassword,"Password must be 6 character");
         }
         else
         {
@@ -131,10 +129,10 @@ public class LoginPage extends AppCompatActivity {
                                 .addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                        GlobalVariable.currentUser = dataSnapshot.getValue(User.class);
-                                        Intent userProfile = new Intent(LoginPage.this,HomePage.class);
+                                        S_GlobalVariable.currentUser = dataSnapshot.getValue(User.class);
+                                        Intent userProfile = new Intent(S_LoginPage.this, S_HomePage.class);
                                         startActivity(userProfile);
-                                        Toast.makeText(LoginPage.this,"Successfully Login",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(S_LoginPage.this,"Successfully Login",Toast.LENGTH_SHORT).show();
                                         finish();
                                     }
                                     @Override
@@ -146,7 +144,7 @@ public class LoginPage extends AppCompatActivity {
                        // startActivity(intent);
                     }
                     else {
-                        Toast.makeText(LoginPage.this,"There is no Account",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(S_LoginPage.this,"There is no Account",Toast.LENGTH_SHORT).show();
                          mLoadingBar.dismiss();
                     }
                 }
