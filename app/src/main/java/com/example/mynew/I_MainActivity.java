@@ -29,7 +29,8 @@ public class I_MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView)findViewById(R.id.addrv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        
+        //fetch data from the database
         FirebaseRecyclerOptions<I_MainModal> options =
                 new FirebaseRecyclerOptions.Builder<I_MainModal>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("advertisements"), I_MainModal.class)
