@@ -45,7 +45,6 @@ public class S_LoginPage extends AppCompatActivity {
         btnLogin = findViewById(R.id.login_button);
         forgotTextLink = findViewById(R.id.login_forgotpassword);
 
-
         //forgot Password
         forgotTextLink.setOnClickListener(new View.OnClickListener() {
             @Override

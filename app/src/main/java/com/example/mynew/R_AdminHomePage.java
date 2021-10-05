@@ -31,7 +31,7 @@ public class R_AdminHomePage extends AppCompatActivity implements NavigationView
     TextView textView;
     MenuItem menuItem;
 
-    RelativeLayout bookStore;
+    RelativeLayout bookStore,Lnews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,8 @@ public class R_AdminHomePage extends AppCompatActivity implements NavigationView
 
         //homepage relative layout id
         bookStore = findViewById(R.id.L8);
+        Lnews = findViewById(R.id.L2);
+
 
         //setSupportActionBar(toolbar);
         navigationView.bringToFront();
@@ -62,6 +64,13 @@ public class R_AdminHomePage extends AppCompatActivity implements NavigationView
             }
         });
 
+        //Latest news and quiz
+        Lnews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(R_AdminHomePage.this, A_back_CategoryActivity.class));
+            }
+        });
 
     }
 
