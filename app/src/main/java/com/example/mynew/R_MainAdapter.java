@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.myViewholder> {
+public class R_MainAdapter extends FirebaseRecyclerAdapter<R_MainModel, R_MainAdapter.myViewholder> {
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -25,12 +25,12 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
      *
      * @param options
      */
-    public MainAdapter(@NonNull  FirebaseRecyclerOptions<MainModel> options) {
+    public R_MainAdapter(@NonNull  FirebaseRecyclerOptions<R_MainModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull  myViewholder holder, int position, @NonNull @NotNull MainModel model) {
+    protected void onBindViewHolder(@NonNull  myViewholder holder, int position, @NonNull @NotNull R_MainModel model) {
         holder.subject_name.setText(model.getSubject_name());
         holder.subject_title.setText(model.getSubject_title());
         holder.subject_description.setText(model.getSubject_description());

@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class R_allretrive extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    MainAdapter mainAdapter;
+    R_MainAdapter mainAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +26,12 @@ public class R_allretrive extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        FirebaseRecyclerOptions<MainModel> options =
-                new FirebaseRecyclerOptions.Builder<MainModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Subjects"), MainModel.class)
+        FirebaseRecyclerOptions<R_MainModel> options =
+                new FirebaseRecyclerOptions.Builder<R_MainModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Subjects"), R_MainModel.class)
                         .build();
 
-        mainAdapter = new MainAdapter(options);
+        mainAdapter = new R_MainAdapter(options);
         recyclerView.setAdapter(mainAdapter);
 
     }
@@ -73,13 +73,13 @@ public class R_allretrive extends AppCompatActivity {
 
     private void txtSearch(String str) {
 
-        FirebaseRecyclerOptions<MainModel> options =
-                new FirebaseRecyclerOptions.Builder<MainModel>()
+        FirebaseRecyclerOptions<R_MainModel> options =
+                new FirebaseRecyclerOptions.Builder<R_MainModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Subjects").
-                                orderByChild("subject_title").startAt(str).endAt(str + "~"), MainModel.class)
+                                orderByChild("subject_title").startAt(str).endAt(str + "~"), R_MainModel.class)
                         .build();
 
-        mainAdapter = new MainAdapter(options);
+        mainAdapter = new R_MainAdapter(options);
         mainAdapter.startListening();
         recyclerView.setAdapter(mainAdapter);
 

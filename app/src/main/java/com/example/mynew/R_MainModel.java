@@ -1,14 +1,14 @@
 package com.example.mynew;
 
-public class MainModel {
+public class R_MainModel {
 
     String subject_name, subject_title, subject_description,surl;
 
-    MainModel ()
+    R_MainModel()
     {
 
     }
-    public MainModel(String subject_name, String subject_title, String subject_description, String surl) {
+    public R_MainModel(String subject_name, String subject_title, String subject_description, String surl) {
         this.subject_name = subject_name;
         this.subject_title = subject_title;
         this.subject_description = subject_description;
