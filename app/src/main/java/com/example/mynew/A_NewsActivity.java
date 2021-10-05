@@ -24,7 +24,7 @@ public class A_NewsActivity extends AppCompatActivity {
         //recyclerView.setLayoutManager(new LinearLayoutManager(this));
         
         
-        //Fetch Data from Firebase Databse
+        //Fetch Data from Firebase Database
         FirebaseRecyclerOptions<A_NewsModel> options =
                 new FirebaseRecyclerOptions.Builder<A_NewsModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("News"), A_NewsModel.class)
