@@ -4,20 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".S_MainActivity"
-    android:background="#C2DFFF">
+    android:background="@color/white"
+    tools:context=".S_MainActivity">
 
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="433dp"
+        android:layout_height="90dp"
+        android:background="@drawable/r"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/homepage"
-        android:layout_width="367dp"
-        android:layout_height="419dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="389dp"
+        android:layout_height="336dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/q" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/homeheader1"
@@ -36,7 +44,7 @@
         android:id="@+id/homeheader"
         android:layout_width="363dp"
         android:layout_height="33dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="336dp"
         android:fontFamily="@font/aclonica"
         android:text=" EDUCATIONAL APP"
         android:textAlignment="center"
@@ -44,7 +52,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.77"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/homepage" />
 
@@ -52,7 +60,7 @@
         android:id="@+id/homepage1"
         android:layout_width="260dp"
         android:layout_height="52dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/aclonica"
         android:text="QUICK LEARN"
         android:textAlignment="center"
@@ -60,9 +68,20 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/homepage"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="@+id/homepage"
-        app:layout_constraintTop_toTopOf="@+id/homepage" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="420dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="128dp"
+        android:background="#000b76"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeheader1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
