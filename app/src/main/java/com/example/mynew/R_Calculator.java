@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class R_Calculator extends AppCompatActivity {
 
+    //declaration
     EditText number1, number2;
     TextView result;
     Button add,subtract,multiply,divide;
