@@ -6,9 +6,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +19,7 @@ import com.google.android.material.navigation.NavigationView;
 
 
 
-public class R_AdminHomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class R_back_AdminHomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -60,7 +57,7 @@ public class R_AdminHomePage extends AppCompatActivity implements NavigationView
         bookStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(R_AdminHomePage.this, S_backend_MainActivity.class));
+                startActivity(new Intent(R_back_AdminHomePage.this, S_backend_MainActivity.class));
             }
         });
 
@@ -68,7 +65,7 @@ public class R_AdminHomePage extends AppCompatActivity implements NavigationView
         Lnews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(R_AdminHomePage.this, A_back_CategoryActivity.class));
+                startActivity(new Intent(R_back_AdminHomePage.this, A_back_CategoryActivity.class));
             }
         });
 
@@ -80,7 +77,7 @@ public class R_AdminHomePage extends AppCompatActivity implements NavigationView
             case R.id.nav_home:
                 break;
             case R.id.nav_addsubjects:
-                Intent intent = new Intent(R_AdminHomePage.this, R_MainActivity.class);
+                Intent intent = new Intent(R_back_AdminHomePage.this, R_back_MainActivity.class);
                 startActivity(intent);
                 break;
         }

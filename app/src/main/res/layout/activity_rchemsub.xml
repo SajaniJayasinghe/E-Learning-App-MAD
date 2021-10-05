@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDFEF"
+    tools:context=".R_chemsub">
+
+    <View
+        android:id="@+id/RDRview"
+        android:layout_width="412dp"
+        android:layout_height="122dp"
+        android:background="@drawable/ic_wave__8_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/RDRtextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="CHEMISTRY"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/RDRview3"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_wave__10_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#DCDFEF"
+        android:text=" 01) Organic"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <TextView
+        android:id="@+id/RDRtextView8"
+        android:layout_width="286dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:background="#DCDFEF"
+        android:text=" 02) Physical Chemistry"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <TextView
+        android:id="@+id/RDRtextView9"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:background="#DCDFEF"
+        android:text=" 03) Electronics"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+
+    <TextView
+        android:id="@+id/RDRtextView10"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="132dp"
+        android:background="#DCDFEF"
+        android:text=" 04) Inogornic"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <TextView
+        android:id="@+id/RDRtextView11"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="172dp"
+        android:background="#DCDFEF"
+        android:text=" 05) Bio Chemistry"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <TextView
+        android:id="@+id/RDRtextView12"
+        android:layout_width="286dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="216dp"
+        android:background="#DCDFEF"
+        android:text=" 06) Industrial Chemistry"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <TextView
+        android:id="@+id/RDRtextView13"
+        android:layout_width="236dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="256dp"
+        android:background="#DCDFEF"
+        android:text=" 07) Ionic Compounds "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <TextView
+        android:id="@+id/RDRtextView14"
+        android:layout_width="191dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="296dp"
+        android:background="#DCDFEF"
+        android:text=" 08) Polymers "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+    <Button
+        android:id="@+id/RDRBtn"
+        android:layout_width="142dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="12dp"
+        android:text="NEXT"
+        android:textColor="#F1EBEB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRtextView14" />
+
+    <ImageView
+        android:layout_width="142dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/exe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDRview" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

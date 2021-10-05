@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDFEF"
+    tools:context=".R_biosub">
+
+    <TextView
+        android:id="@+id/RDGtextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="BIOLOGY"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/RDGview"
+        android:layout_width="412dp"
+        android:layout_height="122dp"
+        android:background="@drawable/ic_wave__8_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/RDGview3"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_wave__10_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/RDGtextview20"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#DCDFEF"
+        android:text=" 01) Biochemistry"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <TextView
+        android:id="@+id/RDGtextView8"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:background="#DCDFEF"
+        android:text=" 02) Biodiversity"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <TextView
+        android:id="@+id/RDGtextView9"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:background="#DCDFEF"
+        android:text=" 03) Cells"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <TextView
+        android:id="@+id/RDGtextView10"
+        android:layout_width="296dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="132dp"
+        android:background="#DCDFEF"
+        android:text=" 04) Classification of Systems"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+
+    <TextView
+        android:id="@+id/RDGtextView11"
+        android:layout_width="286dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="172dp"
+        android:background="#DCDFEF"
+        android:text=" 05) Conduct Investigations"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <TextView
+        android:id="@+id/RDGtextView12"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="216dp"
+        android:background="#DCDFEF"
+        android:text=" 06) Ecosystems"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <TextView
+        android:id="@+id/RDGtextView13"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="256dp"
+        android:background="#DCDFEF"
+        android:text=" 07) Interactions "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <TextView
+        android:id="@+id/RDGtextView14"
+        android:layout_width="271dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="296dp"
+        android:background="#DCDFEF"
+        android:text=" 08) Energy and Dynamics"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+    <Button
+        android:id="@+id/RDGBtn"
+        android:layout_width="142dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="12dp"
+        android:text="NEXT"
+        android:textColor="#F1EBEB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGtextView14" />
+
+    <ImageView
+        android:layout_width="142dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/bio3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDGview" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

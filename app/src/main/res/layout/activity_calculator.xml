@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F6E7E7"
     android:orientation="vertical"
-    tools:context=".R_Calculator">
+    tools:context=".R_back_Calculator">
 
     <TextView
         android:id="@+id/Rancal"

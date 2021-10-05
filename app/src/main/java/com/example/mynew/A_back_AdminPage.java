@@ -77,7 +77,7 @@ public class A_back_AdminPage extends AppCompatActivity {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         S_GlobalVariable.currentUser = dataSnapshot.getValue(User.class);
-                                        Intent userProfile = new Intent(A_back_AdminPage.this, R_AdminHomePage.class);
+                                        Intent userProfile = new Intent(A_back_AdminPage.this, R_back_AdminHomePage.class);
                                         startActivity(userProfile);
                                         Toast.makeText(A_back_AdminPage.this,"Successfully Login",Toast.LENGTH_SHORT).show();
                                         finish();

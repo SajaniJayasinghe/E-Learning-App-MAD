@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CED8E4"
+        android:padding="15dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/RDimg1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="110dp"
+            android:foregroundGravity="center"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/RDsubjectname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RDimg1"
+            android:layout_marginLeft="-221dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/RDimg1"
+            android:text="Subject Name"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RDsubjecttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RDsubjectname"
+            android:layout_marginLeft="-221dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/RDimg1"
+            android:text="Subject Title"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RDsubjectdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RDsubjecttitle"
+            android:layout_marginLeft="-221dp"
+            android:layout_marginTop="-3dp"
+            android:layout_toRightOf="@+id/RDimg1"
+            android:text="Subject Description"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RDsubjectdescription"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

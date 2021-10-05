@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
-public class R_AddActivity extends AppCompatActivity {
+public class R_back_AddActivity extends AppCompatActivity {
 
     EditText name, title, desciption, siurl;
     Button btnAdd, btnBack;
@@ -57,14 +57,14 @@ public class R_AddActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(R_AddActivity.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(R_back_AddActivity.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
 
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(Exception e) {
-                        Toast.makeText(R_AddActivity.this, "Error While Insertion..!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(R_back_AddActivity.this, "Error While Insertion..!", Toast.LENGTH_SHORT).show();
                     }
                 });
 

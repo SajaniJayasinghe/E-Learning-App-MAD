@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDFEF"
+    tools:context=".R_mathssub">
+
+
+    <TextView
+        android:id="@+id/RDtextView14"
+        android:layout_width="191dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="296dp"
+        android:background="#DCDFEF"
+        android:text=" 08) Circular Motion "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <TextView
+        android:id="@+id/RDtextView13"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="256dp"
+        android:background="#DCDFEF"
+        android:text=" 07) Polynomical "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <TextView
+        android:id="@+id/RDtextView12"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="216dp"
+        android:background="#DCDFEF"
+        android:text=" 06) Vectors"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <TextView
+        android:id="@+id/RDtextView11"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="172dp"
+        android:background="#DCDFEF"
+        android:text=" 05) Trigomometry"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <TextView
+        android:id="@+id/RDtextView9"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:background="#DCDFEF"
+        android:text=" 03) Statistics"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <TextView
+        android:id="@+id/RDtextView10"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="132dp"
+        android:background="#DCDFEF"
+        android:text=" 04) Differentiation"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <TextView
+        android:id="@+id/RDtextView8"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:background="#DCDFEF"
+        android:text=" 02) Matrices"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <View
+        android:id="@+id/RDview3"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_wave__10_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:layout_width="142dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/mb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <View
+        android:id="@+id/RDview"
+        android:layout_width="412dp"
+        android:layout_height="122dp"
+        android:background="@drawable/ic_wave__8_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/RDtextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="MATHEMATICS"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#DCDFEF"
+        android:text=" 01) Proberbility"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDview" />
+
+    <Button
+        android:id="@+id/RDBtn"
+        android:layout_width="142dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="12dp"
+        android:text="NEXT"
+        android:textColor="#F1EBEB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDtextView14" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class R_Calculator extends AppCompatActivity {
+public class R_back_Calculator extends AppCompatActivity {
 
     //declaration
     EditText number1, number2;
@@ -47,7 +47,7 @@ public class R_Calculator extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(R_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(R_back_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -66,7 +66,7 @@ public class R_Calculator extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(R_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(R_back_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -85,7 +85,7 @@ public class R_Calculator extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(R_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(R_back_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -104,7 +104,7 @@ public class R_Calculator extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(R_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(R_back_Calculator.this, "Please Enter the numbers properly", Toast.LENGTH_SHORT).show();
                 }
 
             }

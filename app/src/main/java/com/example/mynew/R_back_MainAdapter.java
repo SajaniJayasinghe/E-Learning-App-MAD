@@ -27,7 +27,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class R_MainAdapter extends FirebaseRecyclerAdapter<R_MainModel, R_MainAdapter.myViewholder> {
+public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel, R_back_MainAdapter.myViewholder> {
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -35,12 +35,12 @@ public class R_MainAdapter extends FirebaseRecyclerAdapter<R_MainModel, R_MainAd
      *
      * @param options
      */
-    public R_MainAdapter(@NonNull  FirebaseRecyclerOptions<R_MainModel> options) {
+    public R_back_MainAdapter(@NonNull  FirebaseRecyclerOptions<R_back_MainModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull  myViewholder holder, final int position, @NonNull  R_MainModel model) {
+    protected void onBindViewHolder(@NonNull  myViewholder holder, final int position, @NonNull R_back_MainModel model) {
         holder.subject_name.setText(model.getSubject_name());
         holder.subject_title.setText(model.getSubject_title());
         holder.subject_description.setText(model.getSubject_description());

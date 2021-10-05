@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".R_AdminHomePage"
+    tools:context=".R_back_AdminHomePage"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -107,7 +107,7 @@
                             android:layout_marginTop="10dp"
                             android:text="User Profile"
                             android:textColor="#050505"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/profile"
@@ -125,6 +125,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1">
+
                     <RelativeLayout
                         android:id="@+id/L2"
                         android:layout_width="match_parent"
@@ -133,19 +134,22 @@
                         <TextView
                             android:id="@+id/textView4"
                             android:layout_width="174dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="46dp"
                             android:layout_below="@id/news"
-                            android:layout_marginTop="-9dp"
-                            android:text="Latest News And Quiz"
+                            android:layout_marginTop="-5dp"
+                            android:text="   Latest News And Quiz"
                             android:textColor="#121111"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/news"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="60dp"
                             android:layout_marginTop="15dp"
+                            android:layout_marginEnd="41dp"
                             app:srcCompat="@drawable/rd" />
 
                     </RelativeLayout>
@@ -181,7 +185,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Course Details"
                             android:textColor="#000000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/course"
@@ -213,7 +217,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Q/A Session"
                             android:textColor="#040303"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/qa"
@@ -259,7 +263,7 @@
                             android:layout_marginTop="10dp"
                             android:text="View Q/A"
                             android:textColor="#090707"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/view"
@@ -291,7 +295,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Past Papers"
                             android:textColor="#070707"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <ImageView
                             android:id="@+id/papers"
@@ -335,7 +339,7 @@
                             android:layout_marginTop="10dp"
                             android:text="ADs"
                             android:textColor="#050505"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
                         <ImageView
                             android:id="@+id/ads"
                             android:layout_width="75dp"
@@ -364,7 +368,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Book Store"
                             android:textColor="#090808"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
                         <ImageView
                             android:id="@+id/books"
                             android:layout_width="75dp"
@@ -386,35 +390,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-                    <RelativeLayout
-                        android:id="@+id/L9"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/adminonly"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="Admins Only"
-                            android:textColor="#090909"
-                            android:textSize="24sp" />
-                        <ImageView
-                            android:id="@+id/adminonly"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/onlyforadmin" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -434,7 +410,7 @@
                             android:layout_marginTop="10dp"
                             android:text="Developer Team"
                             android:textColor="#000000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
                         <ImageView
                             android:id="@+id/team"
                             android:layout_width="75dp"

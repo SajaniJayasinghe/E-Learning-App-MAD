@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 public class S_HomePage extends AppCompatActivity {
 
-    RelativeLayout user ,book ,news,advertisment,multiplicationTable;
+    RelativeLayout user ,book ,news,advertisment,multiplicationTable,subjectDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,9 @@ public class S_HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         user = findViewById(R.id.L1);
-        book = findViewById(R.id.L4);
         news = findViewById(R.id.L2);
+        subjectDetails = findViewById(R.id.L3);
+        book = findViewById(R.id.L4);
         advertisment = findViewById(R.id.L7);
         multiplicationTable = findViewById(R.id.L8);
 
@@ -49,10 +50,18 @@ public class S_HomePage extends AppCompatActivity {
                 startActivity(new Intent(S_HomePage.this, I_MainActivity.class));
             }
         });
+
         multiplicationTable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(S_HomePage.this, I_MathTable.class));
+            }
+        });
+
+        subjectDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(S_HomePage.this, R_MainActivity.class));
             }
         });
     }

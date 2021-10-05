@@ -4,12 +4,12 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/r_home"
             android:title="Home" />
 
         <item
             android:id="@+id/nav_addsubjects"
-            android:icon="@drawable/ic_baseline_library_books_24"
+            android:icon="@drawable/r_l_book"
             android:title="Add Subjects" />
 
         <item
@@ -42,7 +42,7 @@
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_logout"
-                    android:icon="@drawable/ic_baseline_mobile_screen_share_24"
+                    android:icon="@drawable/r_mobile"
                     android:title="Log Out" />
             </group>
         </menu>

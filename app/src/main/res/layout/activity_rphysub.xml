@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDFEF"
+    tools:context=".R_physub">
+
+    <View
+        android:id="@+id/RDSview"
+        android:layout_width="412dp"
+        android:layout_height="122dp"
+        android:background="@drawable/ic_wave__8_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/RDStextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="PHYSICS"
+        android:textColor="#0C0C0C"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/RDSview3"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_wave__10_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#DCDFEF"
+        android:text=" 01) Electronics"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+    <TextView
+        android:id="@+id/RDStextView8"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:background="#DCDFEF"
+        android:text=" 02) Waves"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+
+    <TextView
+        android:id="@+id/RDStextView9"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="92dp"
+        android:background="#DCDFEF"
+        android:text=" 03) Measurement"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+    <TextView
+        android:id="@+id/RDStextView10"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="132dp"
+        android:background="#DCDFEF"
+        android:text=" 04) Heat"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+
+    <TextView
+        android:id="@+id/RDStextView11"
+        android:layout_width="186dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="172dp"
+        android:background="#DCDFEF"
+        android:text=" 05) Mechanics"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+    <TextView
+        android:id="@+id/RDStextView12"
+        android:layout_width="256dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="216dp"
+        android:background="#DCDFEF"
+        android:text=" 06) Matter Radiation"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+    <TextView
+        android:id="@+id/RDStextView13"
+        android:layout_width="286dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="256dp"
+        android:background="#DCDFEF"
+        android:text=" 07) Properties Of Matter "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+    <TextView
+        android:id="@+id/RDStextView14"
+        android:layout_width="351dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="296dp"
+        android:background="#DCDFEF"
+        android:text=" 08) Magnetic and Gravitational Fields "
+        android:textColor="#090909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+    <Button
+        android:id="@+id/RDSBtn"
+        android:layout_width="142dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="12dp"
+        android:text="NEXT"
+        android:textColor="#F1EBEB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDStextView14" />
+
+    <ImageView
+        android:layout_width="142dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/rp1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDSview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
