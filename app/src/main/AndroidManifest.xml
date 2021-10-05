@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MYNEW">
-        <activity android:name=".R_physub"></activity>
+        <activity android:name=".DevelopmentTeam"></activity>
+        <activity android:name=".R_physub" />
         <activity android:name=".R_mathssub" />
         <activity android:name=".R_chemsub" />
         <activity android:name=".R_biosub" />

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DevelopmentTeam">
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="418dp"
+        android:layout_height="39dp"
+        android:background="#000b76"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dev"
+        android:layout_width="334dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/cantora_one"
+        android:text="Development Team"
+        android:textAlignment="center"
+        android:textColor="#000b76"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <ImageView
+        android:id="@+id/ima1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/ima2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dev"
+        app:srcCompat="@drawable/female" />
+
+    <ImageView
+        android:id="@+id/randy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintEnd_toStartOf="@+id/ima2"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dev"
+        app:srcCompat="@drawable/female" />
+
+    <ImageView
+        android:id="@+id/aro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintEnd_toStartOf="@+id/ima2"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dev"
+        app:srcCompat="@drawable/female" />
+
+    <ImageView
+        android:id="@+id/sajani1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="424dp"
+        app:layout_constraintEnd_toStartOf="@+id/ima2"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dev"
+        app:srcCompat="@drawable/female" />
+
+    <TextView
+        android:id="@+id/ima2"
+        android:layout_width="170dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="41dp"
+        android:text="Imaya Rajapaksha  Software Engineering SLIIT (Team Leader)"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ima1"
+        app:layout_constraintTop_toBottomOf="@+id/dev" />
+
+    <TextView
+        android:id="@+id/randy2"
+        android:layout_width="170dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="41dp"
+        android:text="Randima Gunarathna Software Engineering SLIIT (Team Member)"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/ima1"
+        app:layout_constraintTop_toBottomOf="@+id/dev" />
+
+    <TextView
+        android:id="@+id/aro2"
+        android:layout_width="170dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="41dp"
+        android:text="Aroshini Dissanayake Software Engineering SLIIT (Team Member)"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toEndOf="@+id/ima1"
+        app:layout_constraintTop_toBottomOf="@+id/dev" />
+
+    <TextView
+        android:id="@+id/sajani2"
+        android:layout_width="170dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="436dp"
+        android:layout_marginEnd="41dp"
+        android:text="Sajani Jayasinghe Software Engineering SLIIT (Team Member)"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/ima1"
+        app:layout_constraintTop_toBottomOf="@+id/dev" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="418dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:background="#000b76"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sajani1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
     TextView textView;
     MenuItem menuItem;
 
-    RelativeLayout bookStore,Lnews;
+    RelativeLayout bookStore,Lnews,developmentTeam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
         //homepage relative layout id
         bookStore = findViewById(R.id.L8);
         Lnews = findViewById(R.id.L2);
-
+        developmentTeam = findViewById(R.id.L10);
 
         //setSupportActionBar(toolbar);
         navigationView.bringToFront();
@@ -69,6 +69,13 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
             }
         });
 
+        //development team
+        developmentTeam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(R_back_AdminHomePage.this, DevelopmentTeam.class));
+            }
+        });
     }
 
     @Override
@@ -80,6 +87,9 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
                 Intent intent = new Intent(R_back_AdminHomePage.this, R_back_MainActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.nav_logout:
+                Intent intent1 = new Intent(R_back_AdminHomePage.this, A_back_AdminPage.class);
+                startActivity(intent1);
         }
 
 
