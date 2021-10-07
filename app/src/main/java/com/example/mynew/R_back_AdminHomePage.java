@@ -77,7 +77,7 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
             }
         });
     }
-
+    //navigation bar
     @Override
     public boolean onNavigationItemSelected(@NonNull  MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -90,9 +90,24 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
             case R.id.nav_logout:
                 Intent intent1 = new Intent(R_back_AdminHomePage.this, A_back_AdminPage.class);
                 startActivity(intent1);
+
+            case R.id.nav_maths:
+                Intent intent2 = new Intent(R_back_AdminHomePage.this, R_mathsguide.class);
+                startActivity(intent2);
+                break;
+            case R.id.nav_bio:
+                Intent intent3 = new Intent(R_back_AdminHomePage.this, R_phyguide.class);
+                startActivity(intent3);
+                break;
+            case R.id.nav_phy:
+                Intent intent4 = new Intent(R_back_AdminHomePage.this, R_bioguide.class);
+                startActivity(intent4);
+                break;
+            case R.id.nav_chem:
+                Intent intent5 = new Intent(R_back_AdminHomePage.this, R_chemguide.class);
+                startActivity(intent5);
+                break;
         }
-
-
         return true;
     }
 }

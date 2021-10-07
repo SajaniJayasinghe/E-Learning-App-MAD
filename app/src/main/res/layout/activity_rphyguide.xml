@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".R_phyguide"
+    android:background="@drawable/bcg3">
+
+
+    <View
+        android:id="@+id/Rview2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="#000B76"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/Rview3"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="#000B76"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/RtextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Guidelines For Biology"
+        android:textColor="#120F0F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rview2" />
+
+    <ImageView
+        android:id="@+id/RimageView2"
+        android:layout_width="157dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RtextView5"
+        app:srcCompat="@drawable/zz" />
+
+    <TextView
+        android:id="@+id/RtextView14"
+        android:layout_width="371dp"
+        android:layout_height="385dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="Biology is subdivided into separate branches for convenience of study, though all the subdivisions are interrelated by basic principles. Thus, while it is custom to separate the study of plants (botany) from that of animals (zoology), and the study of the structure of organisms (morphology) from that of function (physiology), all living things share in common certain biological phenomena—for example, various means of reproduction, cell division, and the transmission of genetic material.Biology is often approached on the basis of levels that deal with fundamental units of life. At the level of molecular biology."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RimageView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

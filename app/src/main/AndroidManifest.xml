@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MYNEW">
-        <activity android:name=".DevelopmentTeam"></activity>
+        <activity android:name=".R_phyguide"></activity>
+        <activity android:name=".R_mathsguide" />
+        <activity android:name=".R_chemguide" />
+        <activity android:name=".R_bioguide" />
+        <activity android:name=".DevelopmentTeam" />
         <activity android:name=".R_physub" />
         <activity android:name=".R_mathssub" />
         <activity android:name=".R_chemsub" />
