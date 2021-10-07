@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 public class S_HomePage extends AppCompatActivity {
 
-    RelativeLayout user ,book ,news,advertisment,multiplicationTable,subjectDetails;
+    RelativeLayout user ,book ,news,advertisment,multiplicationTable,subjectDetails,miniQuiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class S_HomePage extends AppCompatActivity {
         news = findViewById(R.id.L2);
         subjectDetails = findViewById(R.id.L3);
         book = findViewById(R.id.L4);
+        miniQuiz = findViewById(R.id.L5);
         advertisment = findViewById(R.id.L7);
         multiplicationTable = findViewById(R.id.L8);
 
@@ -34,6 +35,13 @@ public class S_HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(S_HomePage.this, S_BookStore.class));
+            }
+        });
+
+        miniQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(S_HomePage.this, A_MainActivity.class));
             }
         });
 

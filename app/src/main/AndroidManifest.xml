@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MYNEW">
-        <activity android:name=".R_phyguide"></activity>
+        <activity android:name=".A_ScoreActivity"></activity>
+        <activity android:name=".A_Questions" />
+        <activity android:name=".A_MathsActivity" />
+        <activity android:name=".A_MainActivity" />
+        <activity android:name=".A_ChemiActivity" />
+        <activity android:name=".A_CategoryActivity" />
+        <activity android:name=".A_BioActivity" />
+        <activity android:name=".R_phyguide" />
         <activity android:name=".R_mathsguide" />
         <activity android:name=".R_chemguide" />
         <activity android:name=".R_bioguide" />

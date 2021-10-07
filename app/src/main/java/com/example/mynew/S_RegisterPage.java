@@ -34,7 +34,6 @@ public class S_RegisterPage extends AppCompatActivity {
     FirebaseDatabase db;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +59,7 @@ public class S_RegisterPage extends AppCompatActivity {
             }
         });
 
+        //login text view
         btn.setOnClickListener((v) ->{
             startActivity(new Intent(S_RegisterPage.this, S_LoginPage.class));
         });
