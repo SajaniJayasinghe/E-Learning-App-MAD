@@ -41,7 +41,7 @@ public class R_back_MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(mainAdapter);
 
 
-       // Add Button
+       //Add Button
         floatingActionButton = (FloatingActionButton)findViewById(R.id.RfloatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +50,7 @@ public class R_back_MainActivity extends AppCompatActivity {
             }
         });
         
-       //Caculator Button 
+       //Calculator Button
         floatingActionButton1 = (FloatingActionButton)findViewById(R.id.R1floatingActionButton);
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +59,7 @@ public class R_back_MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onStart() {
@@ -72,6 +73,7 @@ public class R_back_MainActivity extends AppCompatActivity {
         mainAdapter.startListening();
     }
 
+    //Search Part
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search,menu);
@@ -95,6 +97,7 @@ public class R_back_MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //Search by subject_name
     private void txtSearch(String str) {
 
         FirebaseRecyclerOptions<R_back_MainModel> options =
