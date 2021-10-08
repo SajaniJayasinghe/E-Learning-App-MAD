@@ -3,9 +3,10 @@ package com.example.mynew;
 public class S_MainBookModel {
     String author,bookName,imgurl,stream,description,pid;
 
+    //constructors(zero argument)
     public S_MainBookModel() {
     }
-
+    //constructors
     public S_MainBookModel(String author, String bookName, String description, String imgurl, String stream,String pid) {
         this.author = author;
         this.bookName = bookName;
@@ -15,6 +16,7 @@ public class S_MainBookModel {
         this.pid = pid;
     }
 
+    //getters and setters
     public String getPid() {
         return pid;
     }
