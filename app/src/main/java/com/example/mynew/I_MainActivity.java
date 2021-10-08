@@ -16,7 +16,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class I_MainActivity extends AppCompatActivity {
-
+    
+    //variable decclarartion
     RecyclerView recyclerView;
     I_MainAdapter mainAdapter;
 
@@ -27,6 +28,7 @@ public class I_MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imain);
 
+        //variable initiliztion
         recyclerView = (RecyclerView)findViewById(R.id.addrv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         
