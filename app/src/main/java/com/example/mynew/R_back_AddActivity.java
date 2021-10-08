@@ -33,17 +33,52 @@ public class R_back_AddActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertData();
-                clearAll();
+               performAuth();
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });
     }
+
+    private void performAuth() {
+        String sname = name.getText().toString();
+        String stitle = title.getText().toString();
+        String sdescription = desciption.getText().toString();
+        String saurl = siurl.getText().toString();
+
+        if (sname.isEmpty() || sname.length() < 4)
+        {
+            showError(name, "Subject name is not valid !!");
+        }
+        else if (stitle.isEmpty() || stitle.length() < 4)
+        {
+            showError(title,"Subject title is not valid !!");
+        }
+        else if (sdescription.isEmpty() || sdescription.length() < 4)
+        {
+            showError(desciption,"Subject Description is not valid !!");
+        }
+        else if (saurl.isEmpty() || saurl.length() < 4)
+        {
+            showError(siurl,"Image Url is not valid !!");
+        }
+        else
+        {
+            insertData();
+            clearAll();
+        }
+    }
+
+    private void showError(EditText input, String s) {
+        input.setError(s);
+        input.requestFocus();
+    }
+
 
     private void insertData() {
         Map<String, Object> map = new HashMap<>();

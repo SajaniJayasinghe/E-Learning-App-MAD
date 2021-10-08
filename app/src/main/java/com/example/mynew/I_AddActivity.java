@@ -85,11 +85,11 @@ public class I_AddActivity extends AppCompatActivity {
         }
         else if (advdes.isEmpty() )
         {
-            showError(des, "Your Title is not valid !!");
+            showError(des, "Your Description is not valid !!");
         }
         else if (advurl.isEmpty() )
         {
-            showError(adurl, "Your Name is not valid !!");
+            showError(adurl, "Your Image URL is not valid !!");
         }
         else
         {

@@ -1,6 +1,5 @@
 package com.example.mynew;
 
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -27,7 +26,6 @@ import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBookModel, S_backend_MainBookAdapter.myViewHolder> {
-
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
@@ -37,7 +35,6 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
     public S_backend_MainBookAdapter(@NonNull FirebaseRecyclerOptions<S_MainBookModel> options) {
         super(options);
     }
-
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, final int position, @NonNull S_MainBookModel model) {
         holder.bookName.setText(model.getBookName());
@@ -58,8 +55,6 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                         .setContentHolder(new ViewHolder(R.layout.s_book_update_popup))
                         .setExpanded(true,1210)
                         .create();
-
-
                 //update data
                 View view = dialogPlus.getHolderView();
 
@@ -134,21 +129,16 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                 builder.show();
             }
         });
-
     }
-
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.s_main_book,parent,false);
         return new myViewHolder(view);
     }
-
     class myViewHolder extends RecyclerView.ViewHolder{
-
         CircleImageView imgurl;
         TextView author,bookName,description,stream;
-
         Button book_edit,book_delete;
 
         public myViewHolder(@NonNull View itemView) {
@@ -159,7 +149,6 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
             bookName = (TextView)itemView.findViewById(R.id.bookname);
             stream = (TextView)itemView.findViewById(R.id.book_stream);
             description = (TextView)itemView.findViewById(R.id.book_description);
-
             book_edit = (Button) itemView.findViewById(R.id.book_edit);
             book_delete = (Button) itemView.findViewById(R.id.book_delete);
         }
