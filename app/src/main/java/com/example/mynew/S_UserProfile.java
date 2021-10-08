@@ -45,6 +45,7 @@ public class S_UserProfile extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
+
     if(requestCode ==1000){  //gallery request code 1000
     if(resultCode == Activity.RESULT_OK){
     imageUri = data.getData();
