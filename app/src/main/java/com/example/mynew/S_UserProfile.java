@@ -44,36 +44,36 @@ public class S_UserProfile extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
 
-    if(requestCode ==1000){  //gallery request code 1000
-    if(resultCode == Activity.RESULT_OK){
-    imageUri = data.getData();
-    uploadImageToFirebase(imageUri);
-   }
-  }
-}
+        if(requestCode ==1000){  //gallery request code 1000
+            if(resultCode == Activity.RESULT_OK){
+                imageUri = data.getData();
+                uploadImageToFirebase(imageUri);
+            }
+        }
+    }
     //upload image
     private void uploadImageToFirebase(Uri imageUri) {
-     StorageReference fileRef = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"profile.jpg");
-     fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-     @Override
-     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-     fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-        @Override
-        public void onSuccess(Uri uri) {
+        StorageReference fileRef = storageReference.child("users/"+mAuth.getCurrentUser().getUid()+"profile.jpg");
+        fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
                         Picasso.get().load(uri).into(imageView);
                     }
+                });
+                Toast.makeText(S_UserProfile.this,"Image Uploaded",Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(S_UserProfile.this, "Image Uploaded Failed !", Toast.LENGTH_SHORT).show();
+            }
         });
-      Toast.makeText(S_UserProfile.this,"Image Uploaded",Toast.LENGTH_SHORT).show();
-     }
-   }).addOnFailureListener(new OnFailureListener() {
-        @Override
-        public void onFailure(@NonNull Exception e) {
-        Toast.makeText(S_UserProfile.this, "Image Uploaded Failed !", Toast.LENGTH_SHORT).show();
-      }
-    });
-  }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,51 +134,51 @@ public class S_UserProfile extends AppCompatActivity {
         });
 
         //image button click and open the gallery
-         img.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-         //open the gallery
-         Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-         startActivityForResult(openGalleryIntent, 1000); //gallery request code 1000
-       }
-   });
-
-      //delete the user Account
-      deleteBtn.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-      AlertDialog.Builder dialog = new AlertDialog.Builder(S_UserProfile.this);
-      dialog.setTitle("Are you sure ?");
-      dialog.setMessage("Deleting this account will result in completely removing your account from the system and you won't be able to access the app");
-      dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-
-       @Override
-         public void onClick(DialogInterface dialog, int which) {
-         mUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-         @Override
-         public void onComplete(@NonNull Task<Void> task) {
-            if (task.isSuccessful()) {
-              Toast.makeText(S_UserProfile.this, "Account Deleted", Toast.LENGTH_LONG).show();
-              Intent intent = new Intent(S_UserProfile.this, S_LoginPage.class);
-              intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-              intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-              startActivity(intent);
-           }
-              else {
-                Toast.makeText(S_UserProfile.this, "Invalid User Name Or Password", Toast.LENGTH_SHORT).show();
-         }
-       }
-     });
-   }
- });
-            dialog.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+        img.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(View v) {
+                //open the gallery
+                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(openGalleryIntent, 1000); //gallery request code 1000
+            }
+        });
+
+        //delete the user Account
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(S_UserProfile.this);
+                dialog.setTitle("Are you sure ?");
+                dialog.setMessage("Deleting this account will result in completely removing your account from the system and you won't be able to access the app");
+                dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(S_UserProfile.this, "Account Deleted", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(S_UserProfile.this, S_LoginPage.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    Toast.makeText(S_UserProfile.this, "Invalid User Name Or Password", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                });
+                dialog.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
-         });
-            AlertDialog alertDialog = dialog.create();
-            alertDialog.show();
+                });
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
         });
     }
