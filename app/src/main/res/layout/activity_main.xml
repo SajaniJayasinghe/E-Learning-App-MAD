@@ -29,13 +29,14 @@
 
     <TextView
         android:id="@+id/homeheader1"
-        android:layout_width="237dp"
-        android:layout_height="32dp"
+        android:layout_width="236dp"
+        android:layout_height="22dp"
         android:fontFamily="@font/almendra_sc"
-        android:text="Strat your work"
+        android:text="Start your work"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeheader" />
@@ -76,7 +77,7 @@
         android:id="@+id/view4"
         android:layout_width="420dp"
         android:layout_height="63dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="144dp"
         android:background="#000b76"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"

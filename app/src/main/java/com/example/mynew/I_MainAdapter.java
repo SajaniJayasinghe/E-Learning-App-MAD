@@ -67,7 +67,8 @@ public class I_MainAdapter extends FirebaseRecyclerAdapter<I_MainModal, I_MainAd
                 EditText aEmail = view.findViewById(R.id.txtEmail);
                 EditText aDes = view.findViewById(R.id.txtDescription);
                 EditText aurl = view.findViewById(R.id.txtImageUrl);
-
+                
+                //update advertisement
                 Button ibtnUpdate = view.findViewById(R.id.ibtnUpdate);
 
                 aTitle.setText(model.getaTitle());
@@ -110,7 +111,8 @@ public class I_MainAdapter extends FirebaseRecyclerAdapter<I_MainModal, I_MainAd
                 });
             }
         });
-
+        
+        //Delete advertisement
         holder.ibtnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

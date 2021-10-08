@@ -80,11 +80,11 @@ public class S_RegisterPage extends AppCompatActivity {
         }
         else if (email.isEmpty() || !email.contains("@"))
         {
-            showError(inputEmail,"Email is not valid");
+            showError(inputEmail,"Email is not valid. @ sign is missing");
         }
         else if (email.isEmpty() || !email.contains(".com"))
         {
-            showError(inputEmail,"Email is not valid");
+            showError(inputEmail,"Email is not valid. .com is missing");
         }
         else if (password.isEmpty() || password.length()>7)
         {
