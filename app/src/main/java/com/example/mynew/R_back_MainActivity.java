@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class R_back_MainActivity extends AppCompatActivity {
 
+    //variable declaration
     RecyclerView recyclerView;
     R_back_MainAdapter mainAdapter;
 
@@ -28,10 +29,12 @@ public class R_back_MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rmain);
 
-
+       //variable initialization
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
+        //data fetch from the database
         FirebaseRecyclerOptions<R_back_MainModel> options =
                 new FirebaseRecyclerOptions.Builder<R_back_MainModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Subjects"), R_back_MainModel.class)
@@ -41,7 +44,7 @@ public class R_back_MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(mainAdapter);
 
 
-
+           //Add floating button
         floatingActionButton = (FloatingActionButton)findViewById(R.id.RfloatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +52,9 @@ public class R_back_MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), R_back_AddActivity.class));
             }
         });
+
+
+        //Calculation floating button
         floatingActionButton1 = (FloatingActionButton)findViewById(R.id.R1floatingActionButton);
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
             @Override

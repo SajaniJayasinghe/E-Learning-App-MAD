@@ -2,11 +2,16 @@ package com.example.mynew;
 
 public class R_back_MainModel {
 
+    //attributes
     String subject_name, subject_title, subject_description,surl;
 
+    //zero argument (constructors)
     R_back_MainModel() {
+
     }
 
+
+    //constructors
     public R_back_MainModel(String subject_name, String subject_title, String subject_description, String surl) {
         this.subject_name = subject_name;
         this.subject_title = subject_title;
@@ -14,6 +19,8 @@ public class R_back_MainModel {
         this.surl = surl;
     }
 
+
+    //getters and setters
     public String getSubject_name() {
         return subject_name;
     }
