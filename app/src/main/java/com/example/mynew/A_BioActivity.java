@@ -19,12 +19,13 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class A_BioActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView question,qCount,timer;
     private Button optionA, optionB, optionC, optionD;
-    // private List<QuestionModel> questionList;
+    //private List<A_AQuestionModel> questionList;
     ArrayList<A_AQuestionModel> questionList = new ArrayList<>();
     DatabaseReference databaseReference;
     private int queNum ;
