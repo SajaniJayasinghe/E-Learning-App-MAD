@@ -11,7 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class I_MathTable extends AppCompatActivity {
-
+    
+    //variable decclaration
     EditText ed_table;
     Button btn_submit;
     TextView tv_table;
@@ -20,7 +21,8 @@ public class I_MathTable extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_table);
-
+        
+        //variable initialization
         ed_table = findViewById(R.id.ed_table);
         btn_submit = findViewById((R.id.btn_submit));
         tv_table = findViewById(R.id.tv_table);
