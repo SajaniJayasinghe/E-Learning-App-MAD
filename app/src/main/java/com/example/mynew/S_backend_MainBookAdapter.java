@@ -56,7 +56,7 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                         .setExpanded(true,1210)
                         .create();
 
-                //update data
+//update data
                 View view = dialogPlus.getHolderView();
 
                 EditText bookName = view.findViewById(R.id.bookname);
@@ -75,7 +75,7 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
 
                 dialogPlus.show();
 
-                //data store firebase using hashmap
+ //data store firebase using hashmap
                 bookUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -106,7 +106,7 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
             }
         });
 
-        //Delete data from database
+//Delete data from database
         holder.book_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
