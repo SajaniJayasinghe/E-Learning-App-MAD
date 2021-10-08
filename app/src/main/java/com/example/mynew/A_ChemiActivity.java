@@ -64,18 +64,14 @@ public class A_ChemiActivity extends AppCompatActivity implements View.OnClickLi
     private void getQuestionsList() {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference().child("Biology");
+        DatabaseReference myRef = database.getReference().child("Chem");
 
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
+        questionList.add(new A_AQuestionModel("The maximum number of electron pairs of an atom that are associated with principal quantum number n=3 is, ","3","4","5","9","4"));
+        questionList.add(new A_AQuestionModel("The number of stable resonance structures that can be drawn for the oxalate ion [C2O42-]/(O2C-CO2)2-  is,","2","3","4","5","4"));
+        questionList.add(new A_AQuestionModel("What is the IUPAC name of the following compound? HOCH2CH2CH2COCH2NH2","5-hydroxy-2-oxo-1-pentanamine","1-amino-5-hydroxy-2-pentanone"," 1-amino-5-hydroxy-2-oxopentane","5-amino-4-oxo-1-pentanol","2"));
+        questionList.add(new A_AQuestionModel("Identify the pair of elements which has the largest difference in electronegativities."," B and Al","Be and Al","B and Si","B and C","3"));
+        questionList.add(new A_AQuestionModel("Which of the following statements with regard to polymers is correct?","Nylon is an addition polymer","Teflon is a condensation polymer","Bakelite is a linear polymer","The number of carbon atoms in the repeating unit of natural rubber is 4","3"));
+
 
         setQuestion();
 

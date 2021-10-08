@@ -62,16 +62,12 @@ public class A_BioActivity extends AppCompatActivity implements View.OnClickList
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Biology");
 
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
+        questionList.add(new A_AQuestionModel("Dissolving of solutes in water","increases water potential and solute potential","creases water potential and increases solute potential","increases water potential and decreases solute potential","decreases water potential and solute potential","1"));
+        questionList.add(new A_AQuestionModel("Shoot apical meristem","increase height and diameter of stem","produces cells inwards and outwards","is composed of parenchyma cells","is composed of undiffentiated cells","1"));
+        questionList.add(new A_AQuestionModel("Which of the following statements regarding eukaryotic cell cycle is correct?","Crossing over takes place in metaphase of meiosis 1."," Nuclear envelope reforms during cytokinesis","Formation of mitotic spindle begins in prophase","DNA replication occurs in G2 phase","1"));
+        questionList.add(new A_AQuestionModel("Proteins","form the secondary structure due to disulphide bonds","are made up of 26 different amino acids","are composed of C, H, O, N, S and P","would not be denatured by detergents","2"));
+        questionList.add(new A_AQuestionModel("The first organisms formed on earth are considered to be","heterotrophic, anaerobic eukaryotes","heterotrophic, aerobic prokaryotes","autotrophic, anaerobic eukaryotes","autotrophic, aerobic prokaryotes","3"));
+
 
         setQuestion();
 
