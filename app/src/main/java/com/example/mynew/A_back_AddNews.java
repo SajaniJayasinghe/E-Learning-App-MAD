@@ -32,8 +32,7 @@ public class A_back_AddNews extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertData();
-                clearAll();
+                performAuth();
             }
         });
 
@@ -43,6 +42,27 @@ public class A_back_AddNews extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void performAuth() {
+        String anews = news.getText().toString();
+
+        if (anews.isEmpty())
+        {
+            showError(news, "Enter the question!!!");
+        }
+
+        else
+        {
+            insertData();
+            clearAll();
+        }
+
+    }
+
+    private void showError(EditText input, String s) {
+        input.setError(s);
+        input.requestFocus();
     }
 
     private void insertData()
