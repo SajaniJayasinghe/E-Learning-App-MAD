@@ -30,9 +30,10 @@ import java.util.List;
 public class A_Questions extends AppCompatActivity implements View.OnClickListener {
     private TextView question,qCount,timer;
     private Button optionA, optionB, optionC, optionD;
-    private List<A_AQuestionModel> questionList;
+    // private List<QuestionModel> questionList;
+    ArrayList<A_AQuestionModel> questionList = new ArrayList<>();
     DatabaseReference databaseReference;
-    private int queNum;
+    private int queNum ;
     private CountDownTimer countDown;
     private int score;
     RecyclerView recyclerView;
@@ -40,7 +41,7 @@ public class A_Questions extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions2);
+        setContentView(R.layout.activity_bio);
 
         question = findViewById(R.id.question);
         qCount = findViewById(R.id.quest_num);
@@ -64,232 +65,15 @@ public class A_Questions extends AppCompatActivity implements View.OnClickListen
 
     private void getQuestionsList() {
 
-        questionList = new ArrayList<>();
-
-//        recyclerView = (RecyclerView) findViewById(R.id.rv1);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//        FirebaseRecyclerOptions<Question> options =
-//                new FirebaseRecyclerOptions.Builder<Question>()
-//                        .setQuery(FirebaseDatabase.getInstance().getReference().child("QUIZ"), Question.class)
-//                        .build();
-//
-//        questionsAdapter = new QuestionsAdapter(options);
-//        recyclerView.setAdapter(questionsAdapter);
-//    setQuestion();
-//    }
-//
-//
-//        @Override
-//        protected void onStart() {
-//            super.onStart();
-//            questionsAdapter.startListening();
-//        }
-//
-//        @Override
-//        protected void onStop() {
-//            super.onStop();
-//            questionsAdapter.stopListening();
-//        }
-
-
-//
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference databaseReference = database.getReference();
-//        databaseReference.child("QUIZ").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                //get all of children
-//                Iterable<DataSnapshot> children = snapshot.getChildren();
-//
-//                for (DataSnapshot child : children) {
-//                    QuestionModel questionModel = child.getValue(QuestionModel.class);
-//                    questionList.add(questionModel);
-//                }
-//
-//            }
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//        setQuestion();
-//    }
-
-
-
-
-        // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference().child("QUIZ");
+        DatabaseReference myRef = database.getReference().child("Biology");
 
-//        myRef.setValue("Hello, World!");
+        questionList.add(new A_AQuestionModel("Which of the following is not a source of e.m.f?","Electrochemical cell","Photodiode","Piezoelectric crystal","Thermocouple ","2"));
+        questionList.add(new A_AQuestionModel("An elephant at rest is observed by a person 1km away from his location. The sound intensity of trumpet of the elephant heard by the person is 10-10 Wm-2 , what is the maximum distance from which he can hear this trumpet?","1km","4.5km","10km","20km","3"));
+        questionList.add(new A_AQuestionModel("Ohm is a unit of measuring?","Resistance","Voltage","Current","None of the above","1"));
+        questionList.add(new A_AQuestionModel("Svedberg Unit” is a unit of ?","Concentration","Size","Density","Time","4"));
+        questionList.add(new A_AQuestionModel("Question","A","B","C","D","1"));
 
-
-//         Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    A_AQuestionModel questionModel = dataSnapshot.getValue(A_AQuestionModel.class);
-                    questionList.add(questionModel);
-                }
-
-
-                setQuestion();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-            }
-        });
-
-//        myRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                if (task.isSuccessful()){
-//                    DataSnapshot snapshot = task.getResult();
-//
-//                    for (DataSnapshot dataSnapshot : snapshot){
-//                        questionList.add(new QuestionModel(dataSnapshot.toString("question"),
-//                                dataSnapshot.toString("optionA"),
-//                                dataSnapshot.toString("optionB"),
-//                                dataSnapshot.toString("optonC"),
-//                                dataSnapshot.toString("optonD"),
-//                                dataSnapshot.toString("correctAns")));
-//                    }
-//                }else {
-//                    Toast.makeText(Questions.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//        });
-
-//        databaseReference = FirebaseDatabase.getInstance().getReference("QUIZ");
-//
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    QuestionModel questionModel = dataSnapshot.getValue(QuestionModel.class);
-//                    questionList.add(questionModel);
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
-
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot snapshot) {
-//
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    QuestionModel questionModel = dataSnapshot.getValue(QuestionModel.class);
-//                    questionList.add(questionModel);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError error) {
-//            }
-//        });
-//        setQuestion();
-//    }
-
-//        dquestion = new Firebase("https://mad-27cd8-default-rtdb.asia-southeast1.firebasedatabase.app/"+queNum+"/question");
-//
-//        dquestion.addValueEventListener(new com.firebase.client.ValueEventListener() {
-//            @Override
-//            public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                String question = dataSnapshot.getValue(String.class);
-//                aquestion.setText(question);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-//        });
-
-//        doptionA = new Firebase("https://mad-27cd8-default-rtdb.asia-southeast1.firebasedatabase.app/QUIZ"+queNum+"/optionA");
-//
-//        doptionA.addValueEventListener(new com.firebase.client.ValueEventListener() {
-//            @Override
-//            public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                String optionA = dataSnapshot.getValue(String.class);
-//                aoptionA.setText(optionA);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-//        });
-//
-//        doptionB = new Firebase("https://mad-27cd8-default-rtdb.asia-southeast1.firebasedatabase.app/QUIZ"+queNum+"/optionB");
-//
-//        doptionB.addValueEventListener(new com.firebase.client.ValueEventListener() {
-//            @Override
-//            public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                String optionB = dataSnapshot.getValue(String.class);
-//                aoptionB.setText(optionB);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-//        });
-//
-//        doptionC = new Firebase("https://mad-27cd8-default-rtdb.asia-southeast1.firebasedatabase.app/QUIZ"+queNum+"/optionC");
-//
-//        doptionC.addValueEventListener(new com.firebase.client.ValueEventListener() {
-//            @Override
-//            public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                String optionC = dataSnapshot.getValue(String.class);
-//                aoptionC.setText(optionC);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-//        });
-//
-//        doptionD = new Firebase("https://mad-27cd8-default-rtdb.asia-southeast1.firebasedatabase.app/QUIZ"+queNum+"/optionD");
-//
-//        doptionC.addValueEventListener(new com.firebase.client.ValueEventListener() {
-//            @Override
-//            public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
-//                String optionC = dataSnapshot.getValue(String.class);
-//                aoptionC.setText(optionC);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-//        });
-//
-//        queNum++;
-
-
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
 
         setQuestion();
 
@@ -480,3 +264,5 @@ public class A_Questions extends AppCompatActivity implements View.OnClickListen
         countDown.cancel();
     }
 }
+
+

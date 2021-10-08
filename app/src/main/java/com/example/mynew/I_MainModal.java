@@ -4,10 +4,12 @@ public class I_MainModal {
 
     String aTitle, aName, aNumber, aEmail, aDes, aurl;
 
+    //default constructor
     I_MainModal() {
 
     }
 
+    //Overloaded constructor
     public I_MainModal(String aTitle, String aName, String aNumber, String aEmail, String aDes, String aurl) {
         this.aTitle = aTitle;
         this.aName = aName;
@@ -16,7 +18,8 @@ public class I_MainModal {
         this.aDes = aDes;
         this.aurl = aurl;
     }
-
+    
+    //getters and setters
     public String getaTitle() {
         return aTitle;
     }

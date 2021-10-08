@@ -64,7 +64,7 @@ public class S_LoginPage extends AppCompatActivity {
                         mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                              Toast.makeText(S_LoginPage.this,"Reset Link Sent To Your Email !",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(S_LoginPage.this,"Reset Link Sent To Your Email !",Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
@@ -77,7 +77,7 @@ public class S_LoginPage extends AppCompatActivity {
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                           //close the dialog
+                        //close the dialog
                     }
                 });
                 passwordResetDialog.create().show();
@@ -89,7 +89,7 @@ public class S_LoginPage extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mLoadingBar = new ProgressDialog(S_LoginPage.this);
 
-        //New user redirected register age
+        //New user redirected register page
         btn.setOnClickListener((v)-> {
             startActivity(new Intent(S_LoginPage.this, S_RegisterPage.class));
         });
@@ -119,42 +119,42 @@ public class S_LoginPage extends AppCompatActivity {
             mLoadingBar.setCanceledOnTouchOutside(false);
             mLoadingBar.show();
 
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-        @Override
-        public void onComplete(@NonNull Task<AuthResult> task) {
-        if(task.isSuccessful())
-          {
-           mLoadingBar.dismiss();
-           //Fetch the user details
-           FirebaseDatabase.getInstance().getReference("User") //Database name
-              .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-              .addListenerForSingleValueEvent(new ValueEventListener() {
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful())
+                    {
+                        mLoadingBar.dismiss();
+                        //Fetch the user details
+                        FirebaseDatabase.getInstance().getReference("User") //Database name
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .addListenerForSingleValueEvent(new ValueEventListener() {
 
-           @Override
-           public void onDataChange(DataSnapshot dataSnapshot) { //A DataSnapshot instance contains data from a Firebase Database location. Any time you read Database data, you receive the data as a DataSnapshot.
-           S_GlobalVariable.currentUser = dataSnapshot.getValue(User.class);
-           Intent userProfile = new Intent(S_LoginPage.this, S_HomePage.class);
-           startActivity(userProfile);
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) { //A DataSnapshot instance contains data from a Firebase Database location. Any time you read Database data, you receive the data as a DataSnapshot.
+                                        S_GlobalVariable.currentUser = dataSnapshot.getValue(User.class);
+                                        Intent userProfile = new Intent(S_LoginPage.this, S_HomePage.class);
+                                        startActivity(userProfile);
 
-           Toast.makeText(S_LoginPage.this,"Successfully Login",Toast.LENGTH_SHORT).show();
-           finish();
-      }
-           @Override
-           public void onCancelled(DatabaseError error) {
-      }
-      });
-                  // Intent intent = new Intent(LoginPage.this,UserProfile.class);
-                  // intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                  // startActivity(intent);
+                                        Toast.makeText(S_LoginPage.this,"Successfully Login",Toast.LENGTH_SHORT).show();
+                                        finish();
+                                    }
+                                    @Override
+                                    public void onCancelled(DatabaseError error) {
+                                    }
+                                });
+                        // Intent intent = new Intent(LoginPage.this,UserProfile.class);
+                        // intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        // startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(S_LoginPage.this,"There is no Account",Toast.LENGTH_SHORT).show();
+                        mLoadingBar.dismiss();
+                    }
+                }
+            });
+        }
     }
-          else {
-            Toast.makeText(S_LoginPage.this,"There is no Account",Toast.LENGTH_SHORT).show();
-            mLoadingBar.dismiss();
-         }
-      }
-   });
- }
-}
     private void showError(EditText input , String s) {
         input.setError(s);
         input.requestFocus();

@@ -46,7 +46,7 @@ public class A_back_NewsAdapter extends FirebaseRecyclerAdapter<A_NewsModel,A_ba
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.news.getContext())
                         .setContentHolder(new ViewHolder(R.layout.a_back_update_popup1))
-                        .setExpanded(true,1300)
+                        .setExpanded(true,850)
                         .create();
 
                 //dialogPlus.show();

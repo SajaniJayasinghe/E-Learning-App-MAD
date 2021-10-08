@@ -88,8 +88,9 @@ public class R_back_AdminHomePage extends AppCompatActivity implements Navigatio
                 startActivity(intent);
                 break;
             case R.id.nav_logout:
-                Intent intent1 = new Intent(R_back_AdminHomePage.this, A_back_AdminPage.class);
+                Intent intent1 = new Intent(R_back_AdminHomePage.this, S_MainActivity2.class);
                 startActivity(intent1);
+                break;
 
             case R.id.nav_maths:
                 Intent intent2 = new Intent(R_back_AdminHomePage.this, R_mathsguide.class);

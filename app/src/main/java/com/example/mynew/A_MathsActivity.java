@@ -67,16 +67,11 @@ public class A_MathsActivity extends AppCompatActivity implements View.OnClickLi
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Biology");
 
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question1","A","B","C","D","1"));
-        questionList.add(new A_AQuestionModel("Question2","A","B","C","D","2"));
-        questionList.add(new A_AQuestionModel("Question3","A","B","C","D","3"));
-        questionList.add(new A_AQuestionModel("Question4","A","B","C","D","4"));
-        questionList.add(new A_AQuestionModel("Question5","A","B","C","D","4"));
+        questionList.add(new A_AQuestionModel("The average of first 50 natural number is","25.30","25.5","25.00","12.25","2"));
+        questionList.add(new A_AQuestionModel("The number of 3 digit number divisible by 6, is","149","166","150","151","3"));
+        questionList.add(new A_AQuestionModel("Evaluation of 8^3*8^2*8^-5 is ","1","0","8","None of these","1"));
+        questionList.add(new A_AQuestionModel("Factors of 9 are ","1,2,3","1,2,3,9","1,6,9","None of these","2"));
+        questionList.add(new A_AQuestionModel("What is 999 times 100.0","199.0","999.0","9990","99900","4"));
 
         setQuestion();
 
@@ -95,7 +90,7 @@ public class A_MathsActivity extends AppCompatActivity implements View.OnClickLi
         qCount.setText(String.valueOf(1)+"/"+String.valueOf(questionList.size()));
         statTimer();
 
-        queNum = 1;
+        queNum = 0;
 
     }
 

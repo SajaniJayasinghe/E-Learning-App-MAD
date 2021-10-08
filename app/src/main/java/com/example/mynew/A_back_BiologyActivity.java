@@ -16,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class A_back_BiologyActivity extends AppCompatActivity {
+    //declaring variables
     RecyclerView recyclerView;
     A_back_BiologyAdapter biologyAdapter;
 
