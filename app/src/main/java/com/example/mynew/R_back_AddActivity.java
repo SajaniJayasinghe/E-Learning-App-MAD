@@ -45,6 +45,7 @@ public class R_back_AddActivity extends AppCompatActivity {
         });
     }
 
+    //validation part
     private void performAuth() {
         String sname = name.getText().toString();
         String stitle = title.getText().toString();
