@@ -50,7 +50,7 @@ public class R_back_MainActivity extends AppCompatActivity {
             }
         });
         
-       //Caculator Button 
+       //Calculator Button
         floatingActionButton1 = (FloatingActionButton)findViewById(R.id.R1floatingActionButton);
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
             @Override

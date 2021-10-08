@@ -56,15 +56,15 @@ public class R_back_AddActivity extends AppCompatActivity {
         {
             showError(name, "Subject name is not valid !!");
         }
-        else if (stitle.isEmpty() || stitle.length() < 4)
+        else if (stitle.isEmpty())
         {
             showError(title,"Subject title is not valid !!");
         }
-        else if (sdescription.isEmpty() || sdescription.length() < 4)
+        else if (sdescription.isEmpty())
         {
             showError(desciption,"Subject Description is not valid !!");
         }
-        else if (saurl.isEmpty() || saurl.length() < 4)
+        else if (saurl.isEmpty())
         {
             showError(siurl,"Image Url is not valid !!");
         }
