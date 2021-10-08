@@ -16,10 +16,12 @@ public class A_AQuestionModel {
     String optionD;
     String correctAns;
 
+    //constructor(zero arguments)
     public A_AQuestionModel() {
 
     }
 
+    //constructor
     public A_AQuestionModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAns) {
         this.question = question;
         this.optionA = optionA;
@@ -29,6 +31,7 @@ public class A_AQuestionModel {
         this.correctAns = correctAns;
     }
 
+    //getters and setters
     public String getQuestion() {
         return question;
     }
