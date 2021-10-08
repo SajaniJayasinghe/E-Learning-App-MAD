@@ -39,8 +39,7 @@ public class A_back_AddChemActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertData();
-                clearAll();
+                performAuth();
             }
         });
 
@@ -51,6 +50,58 @@ public class A_back_AddChemActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void performAuth() {
+        String aquestion = question.getText().toString();
+        String aoptionA = optionA.getText().toString();
+        String aoptionB = optionB.getText().toString();
+        String aoptionC = optionC.getText().toString();
+        String aoptionD = optionD.getText().toString();
+        String acorrectAns = correctAns.getText().toString();
+
+        if (aquestion.isEmpty())
+        {
+            showError(question, "Enter the question!!!");
+        }
+
+        else if (aoptionA.isEmpty())
+        {
+            showError(optionA, "Enter Option A!!!");
+        }
+
+        else if (aoptionB.isEmpty())
+        {
+            showError(optionB, "Enter Option B!!!");
+        }
+
+        else if (aoptionC.isEmpty())
+        {
+            showError(optionC, "Enter Option C!!!");
+        }
+
+        else if (aoptionD.isEmpty())
+        {
+            showError(optionD, "Enter Option D!!!");
+        }
+
+        else if (acorrectAns.isEmpty())
+        {
+            showError(correctAns, "Enter the Correct Answer!!!");
+        }
+
+        else
+        {
+            insertData();
+            clearAll();
+        }
+
+    }
+
+    private void showError(EditText input, String s) {
+        input.setError(s);
+        input.requestFocus();
+    }
+
 
     private void insertData()
     {
