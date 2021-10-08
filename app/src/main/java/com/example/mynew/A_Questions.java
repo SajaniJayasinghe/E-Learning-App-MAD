@@ -30,9 +30,10 @@ import java.util.List;
 public class A_Questions extends AppCompatActivity implements View.OnClickListener {
     private TextView question,qCount,timer;
     private Button optionA, optionB, optionC, optionD;
-    private List<A_AQuestionModel> questionList;
+    // private List<QuestionModel> questionList;
+    ArrayList<A_AQuestionModel> questionList = new ArrayList<>();
     DatabaseReference databaseReference;
-    private int queNum;
+    private int queNum ;
     private CountDownTimer countDown;
     private int score;
     RecyclerView recyclerView;
@@ -40,7 +41,7 @@ public class A_Questions extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions2);
+        setContentView(R.layout.activity_bio);
 
         question = findViewById(R.id.question);
         qCount = findViewById(R.id.quest_num);
@@ -64,39 +65,15 @@ public class A_Questions extends AppCompatActivity implements View.OnClickListen
 
     private void getQuestionsList() {
 
-        questionList = new ArrayList<>();
-
-        // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference().child("QUIZ");
-
-//        myRef.setValue("Hello, World!");
-
-
-//         Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    A_AQuestionModel questionModel = dataSnapshot.getValue(A_AQuestionModel.class);
-                    questionList.add(questionModel);
-                }
-
-
-                setQuestion();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-            }
-        });
+        DatabaseReference myRef = database.getReference().child("Biology");
 
         questionList.add(new A_AQuestionModel("Which of the following is not a source of e.m.f?","Electrochemical cell","Photodiode","Piezoelectric crystal","Thermocouple ","2"));
         questionList.add(new A_AQuestionModel("An elephant at rest is observed by a person 1km away from his location. The sound intensity of trumpet of the elephant heard by the person is 10-10 Wm-2 , what is the maximum distance from which he can hear this trumpet?","1km","4.5km","10km","20km","3"));
         questionList.add(new A_AQuestionModel("Ohm is a unit of measuring?","Resistance","Voltage","Current","None of the above","1"));
         questionList.add(new A_AQuestionModel("Svedberg Unit” is a unit of ?","Concentration","Size","Density","Time","4"));
         questionList.add(new A_AQuestionModel("Question","A","B","C","D","1"));
+
 
         setQuestion();
 
@@ -287,3 +264,5 @@ public class A_Questions extends AppCompatActivity implements View.OnClickListen
         countDown.cancel();
     }
 }
+
+

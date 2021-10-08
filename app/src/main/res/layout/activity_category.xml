@@ -101,68 +101,69 @@
 
     <LinearLayout
         android:id="@+id/layout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="381dp"
+        android:layout_height="155dp"
         android:layout_below="@+id/layout1"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
         android:weightSum="2">
+
         <LinearLayout
             android:id="@+id/biologyLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="20dp"
             android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:background="#A6D3EC"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="80dp"
-                android:src="@drawable/biology"/>
+                android:src="@drawable/biology" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="BIOLOGY"
                 android:gravity="center"
+                android:text="BIOLOGY"
                 android:textColor="#CC000000"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/mathsLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="2dp"
+            android:layout_height="166dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="20dp"
-            android:layout_marginStart="5dp"
             android:background="#A6D3EC"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="80dp"
-                android:src="@drawable/rmaths"/>
+                android:src="@drawable/maths" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="COMBINED MATHS"
                 android:gravity="center"
+                android:text="COMBINED MATHS"
                 android:textColor="#CC000000"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
