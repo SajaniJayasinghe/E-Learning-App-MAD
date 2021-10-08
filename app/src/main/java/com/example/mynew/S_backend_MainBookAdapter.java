@@ -42,12 +42,14 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
         holder.stream.setText(model.getStream());
         holder.description.setText(model.getDescription());
 
+//image upload
         Glide.with(holder.imgurl.getContext())
                 .load(model.getImgurl())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.imgurl);
 
+//edit button
         holder.book_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,6 +97,7 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                                         dialogPlus.dismiss();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
+//Exception
                             @Override
                             public void onFailure(Exception e) {
                                 Toast.makeText(holder.bookName.getContext(),"Error while Updating !! ",Toast.LENGTH_SHORT).show();
@@ -131,6 +134,8 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
             }
         });
     }
+
+//Fetch the data from database
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -81,7 +81,7 @@ public class S_backend_MainActivity extends AppCompatActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
-    //Text search the book
+    //Text search the book Name
     private void txtSearch(String str){
         FirebaseRecyclerOptions<S_MainBookModel>options =
                 new FirebaseRecyclerOptions.Builder<S_MainBookModel>()

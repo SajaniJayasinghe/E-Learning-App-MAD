@@ -56,7 +56,7 @@ public class I_MainAdapter extends FirebaseRecyclerAdapter<I_MainModal, I_MainAd
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.i_update_popup))
-                        .setExpanded(true,1450)
+                        .setExpanded(true,1320)
                         .create();
 
                 View view = dialogPlus.getHolderView();

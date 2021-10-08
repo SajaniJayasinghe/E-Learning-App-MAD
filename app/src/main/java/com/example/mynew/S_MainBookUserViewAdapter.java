@@ -43,7 +43,7 @@ public class S_MainBookUserViewAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                 v.getContext().startActivity(myIntent);
             }
         });
-
+//image
         Glide.with(holder.imgurl.getContext())
                 .load(model.getImgurl())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -51,7 +51,7 @@ public class S_MainBookUserViewAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                 .into(holder.imgurl);
 
     }
-
+//fetch the data from database
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
