@@ -36,7 +36,6 @@ public class S_backend_AddNewBook extends AppCompatActivity {
         stream = (EditText)findViewById(R.id.book_stream);
         description =(EditText)findViewById(R.id.book_description);
         imgurl = (EditText)findViewById(R.id.book_image);
-
         btnAdd = (Button)findViewById(R.id.book_addButton);
         btnBack = (Button)findViewById(R.id.book_cancelButton);
 
@@ -50,7 +49,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
                 clearAll();
             }
         });
-        //Back
+        //Back button
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,13 +69,11 @@ public class S_backend_AddNewBook extends AppCompatActivity {
         map.put("description",description.getText().toString());
         map.put("imgurl",imgurl.getText().toString());
 
-
         Bookref.child(bookRandomKey).updateChildren(map)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(S_backend_AddNewBook.this,"Book added Successfully!!",Toast.LENGTH_SHORT).show();
-
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -85,7 +82,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
             }
         });
     }
-
+    //store the book details create the id using date and time
     private void storeBookDetails() {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat currentDate = new SimpleDateFormat("MM dd,yyyy");

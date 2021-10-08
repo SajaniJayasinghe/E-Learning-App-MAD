@@ -46,15 +46,12 @@ public class S_backend_MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), S_backend_AddNewBook.class));
             }
         });
-
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         mainBookAdapter.startListening();
     }
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -74,14 +71,12 @@ public class S_backend_MainActivity extends AppCompatActivity {
                 txtSearch(query);
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String query) {
                 txtSearch(query);
                 return false;
             }
         });
-
         return super.onCreateOptionsMenu(menu);
     }
     //Text search the book
