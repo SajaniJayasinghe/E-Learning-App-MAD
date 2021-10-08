@@ -96,53 +96,51 @@ public class S_RegisterPage extends AppCompatActivity {
         }
         else
         {
-            mLoadingBar.setTitle("Please wait while Register");
-            mLoadingBar.setMessage("Registration");
-            mLoadingBar.setCanceledOnTouchOutside(false);
-            mLoadingBar.show();
+        mLoadingBar.setTitle("Please wait while Register");
+        mLoadingBar.setMessage("Registration");
+        mLoadingBar.setCanceledOnTouchOutside(false);
+        mLoadingBar.show();
 
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()) {
-                        mLoadingBar.dismiss();
-                        sendUserToNextActivity();
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        @Override
+        public void onComplete(@NonNull Task<AuthResult> task) {
+        if(task.isSuccessful()) {
+        mLoadingBar.dismiss();
+        sendUserToNextActivity();
 
-                        //save data to database
-                        User newUser = new User();
-                        newUser.setName(inputName.getText().toString());
-                        newUser.setPhoneNumber(inputPhoneNumber.getText().toString());
-                        newUser.setEmail(inputEmail.getText().toString());
+        //save data to database
+        User newUser = new User();
+        newUser.setName(inputName.getText().toString());
+        newUser.setPhoneNumber(inputPhoneNumber.getText().toString());
+        newUser.setEmail(inputEmail.getText().toString());
 
-                        user.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(newUser)
-                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        Toast.makeText(S_RegisterPage.this,"Register Successful" +task.getException(), Toast.LENGTH_SHORT).show();
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(S_RegisterPage.this,"Registration Fail" +task.getException(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-                    else
-                    {
-                        mLoadingBar.dismiss();
-                        Toast.makeText(S_RegisterPage.this,"Registration Fail"+task.getException().toString(),Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
-    }
-
+        user.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(newUser)
+            .addOnCompleteListener(new OnCompleteListener<Void>() {
+        @Override
+        public void onComplete(@NonNull Task<Void> task) {
+        Toast.makeText(S_RegisterPage.this,"Register Successful" +task.getException(), Toast.LENGTH_SHORT).show();
+      }
+    }).addOnFailureListener(new OnFailureListener() {
+        @Override
+        public void onFailure(@NonNull Exception e) {
+        Toast.makeText(S_RegisterPage.this,"Registration Fail" +task.getException(), Toast.LENGTH_SHORT).show();
+     }
+  });
+}
+        else
+        {
+        mLoadingBar.dismiss();
+        Toast.makeText(S_RegisterPage.this,"Registration Fail"+task.getException().toString(),Toast.LENGTH_SHORT).show();
+      }
+     }
+   });
+  }
+}
     private void sendUserToNextActivity() {
         Intent intent = new Intent(S_RegisterPage.this, S_LoginPage.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
-
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();
