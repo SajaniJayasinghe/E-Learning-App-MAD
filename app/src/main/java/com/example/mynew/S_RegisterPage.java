@@ -101,6 +101,7 @@ public class S_RegisterPage extends AppCompatActivity {
         mLoadingBar.setCanceledOnTouchOutside(false);
         mLoadingBar.show();
 
+        //create authentication using user email and password
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
         @Override
         public void onComplete(@NonNull Task<AuthResult> task) {
