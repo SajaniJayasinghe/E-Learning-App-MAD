@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class S_backend_MainActivity extends AppCompatActivity {
 
+    //variable declaration
     RecyclerView recyclerView;
     S_backend_MainBookAdapter mainBookAdapter;
     FloatingActionButton floatingActionButton;
@@ -26,10 +27,11 @@ public class S_backend_MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sbackend_main);
 
+        //variable initialization
         recyclerView = (RecyclerView)findViewById(R.id.sv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //data fetch in the database
+        //data fetch from the database
         FirebaseRecyclerOptions<S_MainBookModel>options =
                 new FirebaseRecyclerOptions.Builder<S_MainBookModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Book"), S_MainBookModel.class)
@@ -38,7 +40,7 @@ public class S_backend_MainActivity extends AppCompatActivity {
         mainBookAdapter = new S_backend_MainBookAdapter(options);
         recyclerView.setAdapter(mainBookAdapter);
 
-        //Add button (floatinActionButton)
+        //Add button (floatingActionButton)
         floatingActionButton = findViewById(R.id.book_addButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

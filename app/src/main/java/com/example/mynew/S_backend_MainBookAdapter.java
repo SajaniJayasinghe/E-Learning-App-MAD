@@ -55,6 +55,7 @@ public class S_backend_MainBookAdapter extends FirebaseRecyclerAdapter<S_MainBoo
                         .setContentHolder(new ViewHolder(R.layout.s_book_update_popup))
                         .setExpanded(true,1210)
                         .create();
+
                 //update data
                 View view = dialogPlus.getHolderView();
 
