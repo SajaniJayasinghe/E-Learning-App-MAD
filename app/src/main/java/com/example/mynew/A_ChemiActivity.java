@@ -90,7 +90,7 @@ public class A_ChemiActivity extends AppCompatActivity implements View.OnClickLi
         qCount.setText(String.valueOf(1)+"/"+String.valueOf(questionList.size()));
         statTimer();
 
-        queNum = 1;
+        queNum = 0;
 
     }
 

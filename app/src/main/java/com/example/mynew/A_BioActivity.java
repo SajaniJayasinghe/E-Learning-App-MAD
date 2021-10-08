@@ -86,7 +86,7 @@ public class A_BioActivity extends AppCompatActivity implements View.OnClickList
         qCount.setText(String.valueOf(1)+"/"+String.valueOf(questionList.size()));
         statTimer();
 
-        queNum = 1;
+        queNum = 0;
 
     }
 
