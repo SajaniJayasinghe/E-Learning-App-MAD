@@ -55,6 +55,7 @@ public class I_AddActivity extends AppCompatActivity {
 
     }
 
+    //field validation
     private void performAuth() {
         String advtitle = title.getText().toString();
         String advname = name.getText().toString();
