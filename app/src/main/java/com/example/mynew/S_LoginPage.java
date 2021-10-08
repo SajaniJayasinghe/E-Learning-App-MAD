@@ -89,7 +89,7 @@ public class S_LoginPage extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mLoadingBar = new ProgressDialog(S_LoginPage.this);
 
-        //New user redirected register age
+        //New user redirected register page
         btn.setOnClickListener((v)-> {
             startActivity(new Intent(S_LoginPage.this, S_RegisterPage.class));
         });
