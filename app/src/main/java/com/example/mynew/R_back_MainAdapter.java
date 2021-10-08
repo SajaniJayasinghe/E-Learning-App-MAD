@@ -39,12 +39,15 @@ public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel
         super(options);
     }
 
+
     @Override
     protected void onBindViewHolder(@NonNull  myViewholder holder, final int position, @NonNull R_back_MainModel model) {
         holder.subject_name.setText(model.getSubject_name());
         holder.subject_title.setText(model.getSubject_title());
         holder.subject_description.setText(model.getSubject_description());
 
+
+        //image upload
         Glide.with(holder.img.getContext())
                 .load(model.getSurl())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -53,6 +56,7 @@ public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel
                 .into(holder.img);
 
 
+        //edit button part
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,9 +83,13 @@ public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel
 
                 dialogPlus.show();
 
+
+                //update button part
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        //data store firebase using hashmap
                         Map<String,Object> map = new HashMap<>();
                         map.put("subject_name",name.getText().toString());
                         map.put("subject_title",title.getText().toString());
@@ -98,6 +106,8 @@ public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
+
+                                    //Exception
                                     @Override
                                     public void onFailure(Exception e) {
                                         Toast.makeText(holder.subject_name.getContext(), "Error While Updating", Toast.LENGTH_SHORT).show();
@@ -110,6 +120,7 @@ public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel
             }
         });
 
+        //delete button part
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,6 +147,7 @@ public class R_back_MainAdapter extends FirebaseRecyclerAdapter<R_back_MainModel
 
     }
 
+    //retrieve part
     @NonNull
     @Override
     public myViewholder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
