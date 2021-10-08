@@ -41,7 +41,7 @@ public class R_back_MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(mainAdapter);
 
 
-
+       // Add Button
         floatingActionButton = (FloatingActionButton)findViewById(R.id.RfloatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +49,8 @@ public class R_back_MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), R_back_AddActivity.class));
             }
         });
+        
+       //Caculator Button 
         floatingActionButton1 = (FloatingActionButton)findViewById(R.id.R1floatingActionButton);
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
             @Override
