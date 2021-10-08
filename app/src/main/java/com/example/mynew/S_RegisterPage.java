@@ -24,15 +24,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class S_RegisterPage extends AppCompatActivity {
 
     TextView btn;
-
     EditText inputName, inputPhoneNumber,inputEmail,inputPassword,inputConfirmPassword;
     Button btnRegister;
-
     FirebaseAuth mAuth;
     ProgressDialog mLoadingBar;
     DatabaseReference user;
     FirebaseDatabase db;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +48,7 @@ public class S_RegisterPage extends AppCompatActivity {
         user = db.getReference("User");
         btnRegister = findViewById(R.id.reg_signup);
 
-        //Already have an account ?Login textview button
+        //Already have an account ?Login textview button and redirected register page
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +69,7 @@ public class S_RegisterPage extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         String confirmPassword = inputConfirmPassword.getText().toString();
 
+        //validation
         if(name.isEmpty() || name.length()<4)
         {
             showError(inputName,"Your Name is not valid !!");
