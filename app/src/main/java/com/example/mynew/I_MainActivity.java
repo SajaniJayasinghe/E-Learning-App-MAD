@@ -88,6 +88,7 @@ public class I_MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //search function
     private void txtSearch(String str)
     {
         FirebaseRecyclerOptions<I_MainModal> options =
