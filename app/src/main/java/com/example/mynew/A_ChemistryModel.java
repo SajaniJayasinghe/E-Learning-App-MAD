@@ -3,11 +3,13 @@ package com.example.mynew;
 public class A_ChemistryModel {
     String question,optionA,optionB,optionC,optionD,correctAns;
 
+    //constructor(zero arguments)
     A_ChemistryModel()
     {
 
     }
 
+    //constructor
     public A_ChemistryModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAns) {
         this.question = question;
         this.optionA = optionA;
@@ -18,6 +20,7 @@ public class A_ChemistryModel {
     }
 
 
+    //getters and setters
     public String getQuestion() {
         return question;
     }

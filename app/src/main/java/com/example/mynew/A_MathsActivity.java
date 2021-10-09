@@ -62,6 +62,7 @@ public class A_MathsActivity extends AppCompatActivity implements View.OnClickLi
         score = 0;
     }
 
+    //get questions from the database
     private void getQuestionsList() {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();

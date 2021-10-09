@@ -88,8 +88,10 @@ public class I_MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //search function
     private void txtSearch(String str)
     {
+        //firebase reference
         FirebaseRecyclerOptions<I_MainModal> options =
                 new FirebaseRecyclerOptions.Builder<I_MainModal>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("advertisements")

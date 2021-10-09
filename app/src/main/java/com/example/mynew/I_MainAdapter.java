@@ -148,7 +148,8 @@ public class I_MainAdapter extends FirebaseRecyclerAdapter<I_MainModal, I_MainAd
     }
 
     class myViewHolder extends RecyclerView.ViewHolder{
-
+        
+        //decclaration variables
         CircleImageView img;
         TextView aTitle,aName,aNumber,aEmail,aDes;
 
@@ -156,7 +157,8 @@ public class I_MainAdapter extends FirebaseRecyclerAdapter<I_MainModal, I_MainAd
 
         public myViewHolder(@NonNull  View itemView) {
             super(itemView);
-
+            
+            //initializing variables
             img = (CircleImageView)itemView.findViewById(R.id.img1);
             aTitle = (TextView)itemView.findViewById(R.id.titletext);
             aName = (TextView)itemView.findViewById(R.id.nametext);

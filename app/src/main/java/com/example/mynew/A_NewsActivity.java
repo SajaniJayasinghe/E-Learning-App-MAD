@@ -11,6 +11,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class A_NewsActivity extends AppCompatActivity {
 
+    //declaring variables
     RecyclerView recyclerView;
     A_NewsAdapter a_newsAdapter;
 
