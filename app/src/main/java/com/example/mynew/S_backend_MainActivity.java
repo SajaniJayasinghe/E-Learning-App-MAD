@@ -31,7 +31,7 @@ public class S_backend_MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView)findViewById(R.id.sv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //data fetch from the database
+  //data fetch from the database
         FirebaseRecyclerOptions<S_MainBookModel>options =
                 new FirebaseRecyclerOptions.Builder<S_MainBookModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Book"), S_MainBookModel.class)
@@ -40,7 +40,7 @@ public class S_backend_MainActivity extends AppCompatActivity {
         mainBookAdapter = new S_backend_MainBookAdapter(options);
         recyclerView.setAdapter(mainBookAdapter);
 
-        //Add button (floatingActionButton)
+  //Add button (floatingActionButton)
         floatingActionButton = findViewById(R.id.book_addButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,23 +49,23 @@ public class S_backend_MainActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mainBookAdapter.startListening();
+        @Override
+        protected void onStart() {
+          super.onStart();
+          mainBookAdapter.startListening();
     }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mainBookAdapter.stopListening();
+        @Override
+        protected void onStop() {
+          super.onStop();
+          mainBookAdapter.stopListening();
     }
 
     //search the book using first character is Capital letter
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search_book,menu);
-        MenuItem item = menu.findItem(R.id.search_book);
-        SearchView searchView = (SearchView)item.getActionView();
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            getMenuInflater().inflate(R.menu.search_book,menu);
+            MenuItem item = menu.findItem(R.id.search_book);
+            SearchView searchView = (SearchView)item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -81,9 +81,10 @@ public class S_backend_MainActivity extends AppCompatActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
+
     //Text search the book Name
-    private void txtSearch(String str){
-        FirebaseRecyclerOptions<S_MainBookModel>options =
+         private void txtSearch(String str){
+             FirebaseRecyclerOptions<S_MainBookModel>options =
                 new FirebaseRecyclerOptions.Builder<S_MainBookModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Book").orderByChild("bookName").startAt(str).endAt(str+"~"), S_MainBookModel.class)
                         .build();

@@ -41,7 +41,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
 
         Bookref = FirebaseDatabase.getInstance().getReference().child("Book");
 
-        //Add the data via add button
+  //Add the data via add button
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +49,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
                 clearAll();
             }
         });
-        //Back button
+  //Back button
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +58,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
         });
     }
 
-    //insert data and store the fire base
+  //insert data and store the fire base
     private  void insertData(){
         storeBookDetails();
         Map<String,Object> map = new HashMap<>();
@@ -82,7 +82,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
             }
         });
     }
-    //store the book details create the id using date and time
+  //store the book details create the id using date and time
     private void storeBookDetails() {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat currentDate = new SimpleDateFormat("MM dd,yyyy");
@@ -92,7 +92,7 @@ public class S_backend_AddNewBook extends AppCompatActivity {
         bookRandomKey = saveCurrentDate+saveCurrentTime;
     }
 
-    //Clear add details
+  //Clear add details
     private void clearAll(){
         bookName.setText("");
         author.setText("");

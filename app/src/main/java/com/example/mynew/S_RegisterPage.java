@@ -48,7 +48,7 @@ public class S_RegisterPage extends AppCompatActivity {
         user = db.getReference("User");
         btnRegister = findViewById(R.id.reg_signup);
 
-        //Already have an account ?Login textview button and redirected register page
+ //Already have an account ?Login textview button and redirected register page
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +56,7 @@ public class S_RegisterPage extends AppCompatActivity {
             }
         });
 
-        //login text view
+ //login text view
         btn.setOnClickListener((v) ->{
             startActivity(new Intent(S_RegisterPage.this, S_LoginPage.class));
         });
@@ -69,7 +69,7 @@ public class S_RegisterPage extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         String confirmPassword = inputConfirmPassword.getText().toString();
 
-        //validation
+ //validation
         if(name.isEmpty() || name.length()<4)
         {
             showError(inputName,"Your Name is not valid !!");
@@ -101,7 +101,7 @@ public class S_RegisterPage extends AppCompatActivity {
             mLoadingBar.setCanceledOnTouchOutside(false);
             mLoadingBar.show();
 
-            //create authentication using user email and password
+ //create authentication using user email and password
             mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -109,7 +109,7 @@ public class S_RegisterPage extends AppCompatActivity {
                         mLoadingBar.dismiss();
                         sendUserToNextActivity();
 
-                        //save data to database
+//save data to database
                         User newUser = new User();
                         newUser.setName(inputName.getText().toString());
                         newUser.setPhoneNumber(inputPhoneNumber.getText().toString());

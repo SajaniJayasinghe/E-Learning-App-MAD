@@ -25,7 +25,7 @@ public class S_BookStore extends AppCompatActivity {
         recyclerView = (RecyclerView)findViewById(R.id.bv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //Data fetch in the database
+  //Data fetch in the database
         FirebaseRecyclerOptions<S_MainBookModel> options =
                 new FirebaseRecyclerOptions.Builder<S_MainBookModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Book"), S_MainBookModel.class)
@@ -35,41 +35,40 @@ public class S_BookStore extends AppCompatActivity {
         recyclerView.setAdapter(mainBookUserViewAdapter);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mainBookUserViewAdapter.startListening();
+         @Override
+           protected void onStart() {
+             super.onStart();
+             mainBookUserViewAdapter.startListening();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mainBookUserViewAdapter.stopListening();
+         @Override
+           protected void onStop() {
+              super.onStop();
+              mainBookUserViewAdapter.stopListening();
     }
 
     //search book
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search_book,menu);
-        MenuItem item = menu.findItem(R.id.search_book);
-        SearchView searchView = (SearchView)item.getActionView();
+           @Override
+           public boolean onCreateOptionsMenu(Menu menu) {
+               getMenuInflater().inflate(R.menu.search_book,menu);
+               MenuItem item = menu.findItem(R.id.search_book);
+               SearchView searchView = (SearchView)item.getActionView();
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                txtSearch(query);
-                return false;
+               searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                     @Override
+                     public boolean onQueryTextSubmit(String query) {
+                         txtSearch(query);
+                         return false;
             }
-
             @Override
             public boolean onQueryTextChange(String query) {
                 txtSearch(query);
                 return false;
             }
         });
-
         return super.onCreateOptionsMenu(menu);
     }
+    //Search Books
     private void txtSearch(String str){
         FirebaseRecyclerOptions<S_MainBookModel>options =
                 new FirebaseRecyclerOptions.Builder<S_MainBookModel>()

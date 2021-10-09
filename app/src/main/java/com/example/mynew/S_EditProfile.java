@@ -65,7 +65,7 @@ public class S_EditProfile extends AppCompatActivity {
         edtPhoneNumber.setText(S_GlobalVariable.currentUser.getPhoneNumber());
         edtEmail.setText(S_GlobalVariable.currentUser.getEmail());
 
-        //cancel button
+ //cancel button
         Cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +73,7 @@ public class S_EditProfile extends AppCompatActivity {
             }
         });
 
-        //update button
+ //update button
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,21 +87,21 @@ public class S_EditProfile extends AppCompatActivity {
         });
     }
 
-    //update profile
-    private void UpdateFirebaseData(String name, String phoneNumber, String email) {
-        ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Please wait...");
-        progressDialog.setCancelable(false);
-        progressDialog.show();
+ //update profile
+      private void UpdateFirebaseData(String name, String phoneNumber, String email) {
+           ProgressDialog progressDialog = new ProgressDialog(this);
+           progressDialog.setMessage("Please wait...");
+           progressDialog.setCancelable(false);
+           progressDialog.show();
 
-        //get a unique user
+ //get a unique user
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("User").child(mAuth.getCurrentUser().getUid());
         Map<String,Object>updates = new HashMap<String,Object>();
         updates.put("name",name);
         updates.put("phoneNumber",phoneNumber);
         updates.put("email",email);
 
-       databaseReference.updateChildren(updates).addOnCompleteListener(new OnCompleteListener<Void>() {
+        databaseReference.updateChildren(updates).addOnCompleteListener(new OnCompleteListener<Void>() {
            @Override
            public void onComplete(@NonNull Task<Void> task) {
               if(task.isSuccessful()){
@@ -115,10 +115,8 @@ public class S_EditProfile extends AppCompatActivity {
                           public void onDataChange(DataSnapshot snapshot) {
                               S_GlobalVariable.currentUser = snapshot.getValue(User.class);
                           }
-
                           @Override
                           public void onCancelled(DatabaseError error) {
-
                           }
                       });
               }else{
