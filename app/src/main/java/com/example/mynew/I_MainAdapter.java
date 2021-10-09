@@ -148,7 +148,8 @@ public class I_MainAdapter extends FirebaseRecyclerAdapter<I_MainModal, I_MainAd
     }
 
     class myViewHolder extends RecyclerView.ViewHolder{
-
+        
+        //decclaration variables
         CircleImageView img;
         TextView aTitle,aName,aNumber,aEmail,aDes;
 
