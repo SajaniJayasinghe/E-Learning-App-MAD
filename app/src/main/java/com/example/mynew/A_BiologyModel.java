@@ -4,11 +4,13 @@ public class A_BiologyModel {
 
     String question,optionA,optionB,optionC,optionD,correctAns;
 
+    //constructor (zero argumets)
     A_BiologyModel()
     {
 
     }
 
+    //constructor
     public A_BiologyModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAns) {
         this.question = question;
         this.optionA = optionA;
@@ -19,6 +21,7 @@ public class A_BiologyModel {
     }
 
 
+    //getters and setters
     public String getQuestion() {
         return question;
     }
